@@ -1,4 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss', '@nuxt/content']
+    modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
+    content: {
+        api: {
+            baseUrl: "/api/content"
+        }
+    }
 })

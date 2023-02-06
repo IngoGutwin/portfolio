@@ -1,7 +1,6 @@
 <template>
     <main>
         <h1>HelloWorld</h1>
-        <NuxtPage /> 
     </main>
 </template>
 
