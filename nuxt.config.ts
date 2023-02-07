@@ -1,9 +1,15 @@
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
-    content: {
-        api: {
-            baseUrl: "/api/content"
-        }
-    }
+    srcDir: "src",
+    modules: ['@nuxtjs/tailwindcss', '@nuxt/content', 'autoprefixer'],
+    css: ["@@/src/assets/css/base.scss"],
+    plugins: [
+    ],
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    },
 })

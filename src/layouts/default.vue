@@ -1,19 +1,21 @@
 <template>
-    <div class="container mx-auto">
-        <header>
-            <nav class="flex justify-between">
-                <NuxtLink to="/">Home</NuxtLink>
-                <ul class="flex">
-                    <li><NuxtLink to="/">&lt;home /&gt;</NuxtLink></li>
-                    <li><NuxtLink>&lt;about /&gt;</NuxtLink></li>
-                    <li><NuxtLink>&lt;my work /&gt;</NuxtLink></li>
-                    <li><NuxtLink to="/blog">&lt;my Blog /&gt;</NuxtLink></li>
+    <div class="container mx-auto flex flex-col gap-12">
+        <header class="header">
+            <nav class="header__nav flex justify-between">
+                <NuxtLink to="/"><IconsLogo class="header__nav__logo"/></NuxtLink>
+                <ul class="header__nav__box flex self-center">
+                    <li class="header__nav__box--item">
+                        <NuxtLink to="/">&lt;<span class="text-aquamarine-500">home<span class="">/</span></span>&gt;</NuxtLink>
+                    </li>
+                    <li class="header__nav__box--item"><NuxtLink><span>&lt;</span>about<span>/</span>&gt;</NuxtLink></li>
+                    <li class="header__nav__box--item"><NuxtLink>&lt;my-work/&gt;</NuxtLink></li>
+                    <li class="header__nav__box--item"><NuxtLink to="/blog">&lt;my-blog/&gt;</NuxtLink></li>
                 </ul>
             </nav>
         </header>
-        <div>
+        <main>
             <slot></slot>
-        </div>
+        </main>
     </div>
 </template>
 
@@ -21,6 +23,24 @@
 
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+.header {
+    @apply mt-2 shadow-xl shadow-slate-600 hover:shadow-orange-600 rounded-xl;
+
+    &__nav {
+        @apply p-2;
+
+        &__logo {
+            @apply w-40;
+        }
+
+        &__box {
+            
+            &--item {
+                @apply mx-4 hover:shadow-orange-600 p-4;
+            }
+        }
+    }
+}
 
 </style>
