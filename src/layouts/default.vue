@@ -31,7 +31,7 @@
         @apply p-2;
 
         &__logo {
-            @apply w-40;
+            @apply w-64;
         }
 
         &__box {
