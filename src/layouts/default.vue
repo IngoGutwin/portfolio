@@ -4,12 +4,26 @@
             <nav class="header__nav flex justify-between">
                 <NuxtLink to="/"><IconsLogo class="header__nav__logo"/></NuxtLink>
                 <ul class="header__nav__box flex self-center">
-                    <li class="header__nav__box--item">
-                        <NuxtLink to="/">&lt;<span class="text-aquamarine-500">home<span class="">/</span></span>&gt;</NuxtLink>
+                    <li>
+                        <NuxtLink class="header__nav__box--item" to="/">
+                            <span>.01</span>Home
+                        </NuxtLink>
                     </li>
-                    <li class="header__nav__box--item"><NuxtLink><span>&lt;</span>about<span>/</span>&gt;</NuxtLink></li>
-                    <li class="header__nav__box--item"><NuxtLink>&lt;my-work/&gt;</NuxtLink></li>
-                    <li class="header__nav__box--item"><NuxtLink to="/blog">&lt;my-blog/&gt;</NuxtLink></li>
+                    <li>
+                        <NuxtLink class="header__nav__box--item" to="#about">
+                            <span>.02</span>About
+                        </NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink class="header__nav__box--item" to="#Work">
+                            <span>.03</span>Work
+                        </NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink class="header__nav__box--item" to="/blog">
+                            <span>.04</span>Blog
+                        </NuxtLink>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -25,19 +39,23 @@
 
 <style lang="scss" scoped>
 .header {
-    @apply mt-2 shadow-xl shadow-slate-600 hover:shadow-orange-600 rounded-xl;
+    @apply mt-2;
 
     &__nav {
-        @apply p-2;
+        @apply p-2 font-Shure-Tech-sans;
 
         &__logo {
-            @apply w-64;
+            @apply w-32;
         }
 
         &__box {
             
             &--item {
-                @apply mx-4 hover:shadow-orange-600 p-4;
+                @apply mx-1 hover:shadow-md hover:shadow-aquamarine-500 p-4 rounded-3xl;
+
+                > span {
+                    @apply mr-1 text-aquamarine-500;
+                }
             }
         }
     }

@@ -11,6 +11,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'Ibara-sans': ['Ibarra Real Nova, serif;'],
+        'Shure-Tech-sans': ['Shure Tech Mono, serif'],
+        'Public-sans-serif': ['Public Sans, sans-serif'],
+        'Open-Dyslex-Alta-serif': ['Open Dyslexic Alta, sans-serif'],
+        'Open-Dyslex-serif': ['Open Dyslexic, sans-serif'],
+        'Open-Dyslex-Mono-serif': ['Open Dyslexic Mono, sans-serif'],
+      },
       colors: {
           'blue-charcoal': {
               50: '#0F58C6',
@@ -38,6 +46,7 @@ module.exports = {
             800: '#00BB8E',
             900: '#008363'
           },
+          'moon-raker': '#CCD6F6',
       }
     },
   },

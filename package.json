@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.4.3",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/tailwindcss": "^6.3.1",
     "autoprefixer": "^10.4.13",
     "node-sass": "^8.0.0",
@@ -16,5 +17,7 @@
     "postcss": "^8.4.21",
     "sass-loader": "^13.2.0"
   },
-  "browserslist": ["defaults"]
+  "browserslist": [
+    "defaults"
+  ]
 }
