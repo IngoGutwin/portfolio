@@ -1,3 +1,5 @@
+@use "./fonts" as *;
+
 body {
-    @apply bg-blue-zodiac-500 text-orange-200;
+    @apply bg-blue-zodiac-500 text-aquamarine-200 text-sm;
 }
