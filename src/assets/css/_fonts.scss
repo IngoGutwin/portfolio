@@ -1,3 +1,29 @@
-body {
-    @apply bg-slate-600;
+@font-face {
+    font-family: "Ibarra Real Nova";
+    src: url("@@/src/assets/fonts/Ibarra/IbarraRealNova-VariableFont_wght.ttf")
+        format("truetype-variations");
+}
+
+@font-face {
+    font-family: "Public Sans";
+    src: url("@@/src/assets/fonts/PublicSans/PublicSans-VariableFont_wght.ttf")
+        format("truetype-variations");
+}
+
+@font-face {
+    font-family: "Open Dyslexic Alta";
+    src: url("@@/src/assets/fonts/OpenDyslexic/OpenDyslexicAltaRegular.otf")
+        format("truetype-variations");
+}
+
+@font-face {
+    font-family: "Open Dyslexic";
+    src: url("@@/src/assets/fonts/OpenDyslexic/OpenDyslexicRegular.otf")
+        format("truetype-variations");
+}
+
+@font-face {
+    font-family: "Open Dyslexic Mono";
+    src: url("@@/src/assets/fonts/OpenDyslexic/OpenDyslexicMonoRegular.otf")
+        format("truetype-variations");
 }
