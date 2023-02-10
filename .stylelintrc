@@ -1,0 +1,21 @@
+{
+    "rules": {
+        "at-rule-no-unknow": [
+            true,
+            {
+                "ignoreAtRules": [
+                    "tailwindcss",
+                    "apply",
+                    "variants",
+                    "responsive",
+                    "screen"
+                ]
+            }
+        ],
+        "declaration-block-trailing-semicolon": null,
+        "no-descending-specificity": null
+    },
+    "extends": [
+        "stylelint-config-recommended"
+    ]
+}

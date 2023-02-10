@@ -8,7 +8,7 @@ or go throug the  to create a new project with nuxt
 
 ## Prerequisites
 
-### Before getting started, please make sure you have installed the recommended setup.
+### Before getting started, please make sure you have installed the recommended setup
 
 - [x]  Node.js (latest LTS version) 👉 [Download](https://nodejs.org/en/download/)
 - [x]  Visual Studio Code 👉 [Download](https://code.visualstudio.com/)

@@ -1,6 +1,6 @@
 <template>
     <ContentDoc>
-        <template v-slot="{ doc }">
+        <template #default="{ doc }">
             <ContentRendererMarkdown :value="doc" />
         </template>
     </ContentDoc>
@@ -12,15 +12,14 @@
 
 <style lang="scss" scoped>
 ul {
-    @apply ml-8;
+	@apply ml-8;
 }
 
 a {
-    @apply text-aquamarine-600 font-bold;
+	@apply text-aquamarine-600 font-bold;
 }
 
 .task-list-item {
-    @apply my-1;
+	@apply my-1;
 }
-
 </style>
