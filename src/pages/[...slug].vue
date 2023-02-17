@@ -1,25 +1,21 @@
 <template>
-    <ContentDoc>
-        <template #default="{ doc }">
-            <ContentRendererMarkdown :value="doc" />
-        </template>
+    <ContentDoc
+        v-slot="{ doc }"
+    >
+        <ContentRenderer :value="doc" />
     </ContentDoc>
 </template>
 
-<script setup>
-
+<script>
 </script>
 
 <style lang="scss" scoped>
 ul {
-	@apply ml-8;
+    @apply ml-8;
 }
 
 a {
-	@apply text-aquamarine-600 font-bold;
+    @apply text-aquamarine-400 font-bold font-Public-sans-serif;
 }
 
-.task-list-item {
-	@apply my-1;
-}
 </style>

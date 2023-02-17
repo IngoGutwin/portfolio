@@ -1,51 +1,13 @@
 <template>
-    <div class="container mx-auto flex flex-col gap-12">
-        <header class="header">
-            <nav class="header__nav flex justify-between">
-                <NuxtLink to="/">
-                    <IconsLogo class="header__nav__logo" />
-                </NuxtLink>
-                <ul class="header__nav__box flex self-center">
-                    <li>
-                        <NuxtLink
-                            class="
-                header__nav__box--item
-                hover:shadow-md hover:shadow-aquamarine-500
-              "
-                            to="/"
-                        >
-                            <span>.01</span>Home
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink
-                            class="header__nav__box--item"
-                            to="#about"
-                        >
-                            <span>.02</span>About
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink
-                            class="header__nav__box--item"
-                            to="#Work"
-                        >
-                            <span>.03</span>Work
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink
-                            class="header__nav__box--item"
-                            to="/blog"
-                        >
-                            <span>.04</span>Blog
-                        </NuxtLink>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <slot />
+    <div
+        id="home"
+        class="scroll-smooth"
+    >
+        <NavBar />
+        <main class="main">
+            <div class="main__left" />
+            <slot class="main__center" />
+            <div class="main__right" />
         </main>
     </div>
 </template>
@@ -53,25 +15,17 @@
 <script></script>
 
 <style lang="scss" scoped>
-.header {
-  @apply mt-2;
 
-  &__nav {
-    @apply p-2 font-Shure-Tech-sans;
+.main {
+    @apply flex flex-col items-center;
 
-    &__logo {
-      @apply w-32;
+    &__left,
+    &__right {
+        @apply w-40
     }
 
-    &__box {
-      &--item {
-        @apply mx-1 p-4 rounded-3xl;
-
-        > span {
-          @apply mr-1 text-aquamarine-500;
-        }
-      }
+    &__center {
+        @apply container mx-auto;
     }
-  }
 }
 </style>
