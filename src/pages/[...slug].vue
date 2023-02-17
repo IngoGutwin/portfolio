@@ -9,12 +9,12 @@
 <script>
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 ul {
     @apply ml-8;
 }
 
-a {
+p > a {
     @apply text-aquamarine-400 font-bold font-Public-sans-serif;
 }
 

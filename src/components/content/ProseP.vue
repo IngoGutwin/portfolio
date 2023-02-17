@@ -3,3 +3,9 @@
         <slot />
     </p>
 </template>
+
+<style>
+p > * a {
+    @apply font-bold !important;
+}
+</style>
