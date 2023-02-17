@@ -112,7 +112,7 @@ export default {
         }
 
         &__item:hover::before {
-            opacity: 0.1;
+            opacity: 0.03;
         }
 
         &__item::after {

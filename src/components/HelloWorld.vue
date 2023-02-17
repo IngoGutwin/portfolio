@@ -3,7 +3,7 @@
         class="intro"
     >
         <h1 class="intro__heading--h1">
-            Hey, i'm <span>Ingo</span>
+            Hey, I'm <span>Ingo</span>
         </h1>
         <h2 class="intro__heading--h2">
             I bring
