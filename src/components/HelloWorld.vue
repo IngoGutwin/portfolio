@@ -23,7 +23,7 @@
 
 <style lang="scss" scoped>
 .intro {
-    @apply flex flex-col gap-10 self-center mt-24 h-screen sm:w-8/12 lg:w-8/12 xl:w-6/12;
+    @apply flex flex-col gap-10 self-center mt-24 min-h-[550px] sm:w-8/12 lg:w-8/12 xl:w-6/12;
 
     &__heading {
         &--h1 {

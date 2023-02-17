@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-    @apply flex justify-between items-center pt-16 h-screen w-8/12 lg:w-6/12;
+    @apply flex justify-between min-h-[550px] items-center pt-16 w-8/12 lg:w-6/12;
 
     &__info {
         @apply flex flex-col gap-5 w-6/12;
