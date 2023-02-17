@@ -1,25 +1,25 @@
 # How setup Tailwind and SCSS with Nuxt 3
 
-This guide will show you how to install and utilize Tailwindcss and Sass in your Nuxt 3 project.
+This guide will show you how to install and utilize Tailwind CSS and Sass in your Nuxt 3 project.
 
-## Prerequisites
+## PREREQUISITES
 
-Before getting started, please make sure you have scaffold up a new project as mentioned here 👉 [Nuxt3 Project](newProjectNuxt3.md) and.
+Before getting started, please make sure you have set up a new project as mentioned here 👉 [Nuxt3 Project](newProjectNuxt3.md) and.
 
 ### If you already have a new project, let's jump right in
 
 ### Install all the dependecies 
 
-Type in your Terminal:
+Install all the dependencies by typing the following commands in your terminal:
 
 npm install -D @nuxtjs/tailwindcss postcss@latest autoprefixer@latest \
 sass-loader node-sass sass.
 
-### then... init tailwind.config
+### Then, initialize the tailwind.config file by running the command:
 
 npx tailwindcss init
 
-### update the tailwind.config.js
+### Update the tailwind.config.js file with the following content:
 
 ```javascript
 
@@ -44,7 +44,7 @@ module.exports = {
 ```javascript
 
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
+    modules: ['@nuxtjs/tailwindcss'],
     css: ['@@/assets/css/base.scss'], <-- "feel free to rename it"
     plugins: [
     ],
@@ -59,7 +59,7 @@ export default defineNuxtConfig({
 
 ```
 
-### now create needed folders and files
+### Now, create the necessary folders and files:
 
 - [x] Folders: components, assets/css, pages, layout -> (optional)
 
@@ -67,4 +67,5 @@ export default defineNuxtConfig({
 
 - [x] start your dev server -> npm run dev
 
-- [x] and use scss and tailwind in your project.
+### Start your dev server by running the command "npm run dev" and use SCSS and Tailwind in your project.
+
