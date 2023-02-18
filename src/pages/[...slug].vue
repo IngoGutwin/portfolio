@@ -2,20 +2,55 @@
     <ContentDoc
         v-slot="{ doc }"
     >
-        <ContentRenderer :value="doc" />
+        <ContentRenderer
+            :value="doc"
+            class="article"
+        />
     </ContentDoc>
 </template>
 
 <script>
+export default {
+    mounted () {
+        this.getElements()
+    },
+    methods: {
+        getElements () {
+            const inputFields = document.getElementsByTagName('input')
+            console.log(inputFields)
+        }
+    }
+}
+
 </script>
 
 <style lang="scss">
-ul {
-    @apply ml-8;
-}
+.article {
+    @apply max-w-sm px-4 sm:max-w-xl md:max-w-2xl lg:w-10/12 lg:max-w-5xl mx-auto;
 
-p > a {
-    @apply text-aquamarine-400 font-bold font-Public-sans-serif;
+    ul {
+        @apply ml-8;
+
+        .task-list-item {
+            @apply my-4;
+
+            > input {
+                @apply bg-black;
+            }
+        }
+    }
+
+    a {
+        @apply text-aquamarine-400 font-bold font-Public-sans-serif;
+    }
+
+    pre {
+        @apply bg-blue-zodiac-400 rounded-lg p-4;
+
+        > code {
+            @apply whitespace-pre-wrap;
+        }
+    }
 }
 
 </style>

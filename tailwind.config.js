@@ -9,6 +9,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            screens: {
+                xs: '475px'
+            },
             fontFamily: {
                 'Ibara-sans': ['Ibarra Real Nova, serif;'],
                 'Shure-Tech-sans': ['Shure Tech Mono, serif'],

@@ -56,10 +56,10 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-    @apply flex justify-between min-h-[550px] items-center pt-16 w-8/12 lg:w-6/12;
+    @apply flex flex-wrap min-h-[550px] py-16 w-11/12;
 
     &__info {
-        @apply flex flex-col gap-5 w-6/12;
+        @apply flex flex-col gap-5 w-11/12 mx-auto;
 
         &__heading {
             @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl;
@@ -86,16 +86,17 @@ export default {
         }
 
         &__technologies {
-            @apply flex justify-around;
+            @apply flex justify-around whitespace-nowrap mb-8;
         }
     }
 
     &__photo {
         width: clamp(20em, 1em, 45em);
         height: 15em;
+        margin: auto;
 
         &__item {
-            @apply w-full h-full relative;
+            @apply w-full h-full relative rounded-[2rem];
         }
 
         &__item::before {
@@ -136,4 +137,21 @@ export default {
 
     }
 }
+
+@screen md {
+    .about {
+        @apply w-11/12 items-center;
+
+        &__info{
+            @apply w-5/12 order-2;
+        }
+    }
+}
+
+@screen lg {
+    .about {
+        @apply w-8/12;
+    }
+}
+
 </style>

@@ -19,9 +19,36 @@ or go throug the  to create a new project with nuxt
 
 ### **Start a new Project**
 
-- [x]  Create a new starter project in your Terminal: `$ npx nuxi init [project-name]`
-- [x]  Open your project folder in Visual Studio Code: **$code [project-name]**
-- [x]  In your Terminal install the dependencies: **$npm install**
-- [x]  Start Development Server: **$npm run dev**
+- [x]  Create a new starter project in your Terminal: 
+
+``` 
+
+npx nuxi init [project-name]
+
+```
+
+- [x]  Open your project folder in Visual Studio Code: 
+
+```
+
+code [project-name]
+
+```
+
+- [x]  In your Terminal install the dependencies:
+
+```
+
+npm install
+
+```
+
+- [x]  Start Development Server:
+
+```
+
+npm run dev 
+
+```
 
 ### **Well done! A browser window should automatically open for <http://localhost:3000>**

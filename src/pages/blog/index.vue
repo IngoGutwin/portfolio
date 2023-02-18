@@ -1,8 +1,7 @@
 <template>
-    <div>
+    <div class="content-list">
         <ContentList
             v-slot="{ list }"
-            class="content-list"
             path="/blog"
         >
             <div
@@ -31,13 +30,13 @@
 
 <style lang="scss" scoped>
 .content-list {
-    @apply flex flex-col;
+    @apply flex flex-col w-11/12 md:max-w-3xl;
 
     &__block {
         @apply p-4 rounded-xl text-aquamarine-200 hover:shadow-md hover:shadow-aquamarine-500 text-center;
 
         &--heading {
-            @apply py-4 text-2xl font-bold;
+            @apply py-4 text-2xl font-bold text-aquamarine-500;
         }
     }
 }

@@ -22,22 +22,25 @@
 </script>
 
 <style lang="scss" scoped>
+
 .intro {
-    @apply flex flex-col gap-10 self-center mt-24 min-h-[550px] sm:w-8/12 lg:w-8/12 xl:w-6/12;
+    @apply flex flex-col gap-10 self-center mt-24 min-h-[550px] w-10/12;
 
     &__heading {
+        @apply max-w-sm px-7;
+
         &--h1 {
             @apply font-Shure-Tech-sans text-base text-aquamarine-500;
 
             > span {
-                @apply uppercase font-Shure-Tech-sans text-5xl bg-clip-text text-transparent bg-gradient-to-b from-blue-zodiac-50 to-aquamarine-700;
+                @apply uppercase font-Shure-Tech-sans text-3xl bg-clip-text text-transparent bg-gradient-to-b from-blue-zodiac-50 to-aquamarine-700;
             }
         }
         &--h2 {
-            @apply font-bold font-Public-sans-serif text-zinc-400 text-7xl;
+            @apply font-bold font-Public-sans-serif text-zinc-400 text-5xl;
 
             > span {
-                @apply font-extrabold font-Open-Dyslex-serif bg-clip-text text-transparent animate-bounce;
+                @apply font-bold font-Open-Dyslex-serif bg-clip-text text-transparent animate-bounce;
             }
             > span:nth-child(1) {
                 @apply bg-gradient-to-r from-aquamarine-700 to-blue-zodiac-50;
@@ -52,8 +55,55 @@
     }
 
     &__description {
-        @apply sm:w-2/3 lg:w-1/2 text-zinc-400 font-Public-sans-serif text-base;
+        @apply text-zinc-400 font-Public-sans-serif text-base;
     }
-
 }
+
+@screen xs {
+    .intro {
+        @apply w-9/12
+    }
+}
+
+@screen sm {
+    .intro {
+        @apply w-10/12 px-6;
+
+        &__heading {
+            &--h1 {
+
+                > span {
+                    @apply text-5xl;
+                }
+            }
+            &--h2 {
+                > span {
+                    @apply font-extrabold;
+                }
+            }
+        }
+
+        &__description {
+            @apply w-9/12;
+        }
+
+    }
+}
+
+@screen md {
+    .intro {
+        @apply w-10/12;
+    }
+}
+
+@screen lg {
+    .intro {
+        @apply w-7/12 px-0;
+
+        &__description {
+            @apply w-7/12;
+        }
+    }
+}
+
 </style>
