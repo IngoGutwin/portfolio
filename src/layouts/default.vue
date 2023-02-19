@@ -3,9 +3,9 @@
         <NavBar class="layout__navBar" />
         <NavBarMobile class="layout__navBarMobile" />
         <main class="layout__main">
-            <div class="main__left" />
-            <slot class="main__center" />
-            <div class="main__right" />
+            <div class="layout__main__left" />
+            <slot class="layout__main__center" />
+            <div class="layout__main__right" />
         </main>
     </div>
 </template>

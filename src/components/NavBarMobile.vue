@@ -1,5 +1,8 @@
 <template>
-    <nav class="nav-mobile">
+    <nav
+        class="nav-mobile"
+        :class="{hideNavBar: !navBar.navBarToggle}"
+    >
         <NuxtLink to="/">
             <IconsLoGo class="nav-mobile__logo" />
         </NuxtLink>
@@ -62,10 +65,23 @@ const toggleNavbar = () => {
         }
 
         &__toggle {
-            @apply transition ease-out bg-blue-zodiac-500 absolute top-5 right-10 w-12 h-14 z-50 flex gap-2 flex-col justify-center;
+            @apply transition ease-out bg-blue-zodiac-500 fixed top-5 right-10 w-12 h-14 z-50 flex gap-2 flex-col justify-center;
 
             &__item{
                 @apply bg-aquamarine-700 rounded-lg w-10 h-1 self-center;
+            }
+
+        }
+
+        &__box {
+            @apply flex flex-col pt-36 pl-8 gap-12 fixed top-0 right-0 bg-blue-zodiac-500 w-6/12 h-screen transition ease-linear translate-x-full;
+
+            &--item {
+                @apply mx-1 p-4 text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500;
+
+                > span {
+                    @apply mr-1 text-aquamarine-500;
+                }
             }
 
         }
@@ -74,17 +90,8 @@ const toggleNavbar = () => {
             @apply transition ease-out rotate-90;
         }
 
-        &__box {
-            @apply flex flex-col pt-36 pl-8 gap-12 absolute top-0 right-0 bg-blue-zodiac-500 w-6/12 h-screen transition ease-linear translate-x-full;
-
-            &--item {
-                @apply mx-1 p-4 text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500;
-
-                > span {
-                @apply mr-1 text-aquamarine-500;
-                }
-            }
-
+        .hiddeNavBar {
+            @apply hidden;
         }
 
         .toggeled{
