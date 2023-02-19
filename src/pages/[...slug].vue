@@ -9,19 +9,7 @@
     </ContentDoc>
 </template>
 
-<script>
-export default {
-    mounted () {
-        this.getElements()
-    },
-    methods: {
-        getElements () {
-            const inputFields = document.getElementsByTagName('input')
-            console.log(inputFields)
-        }
-    }
-}
-
+<script setup>
 </script>
 
 <style lang="scss">
@@ -33,10 +21,6 @@ export default {
 
         .task-list-item {
             @apply my-4;
-
-            > input {
-                @apply bg-black;
-            }
         }
     }
 

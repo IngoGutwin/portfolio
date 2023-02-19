@@ -1,10 +1,8 @@
 <template>
-    <div
-        id="home"
-        class="scroll-smooth"
-    >
-        <NavBar />
-        <main class="main">
+    <div class="layout">
+        <NavBar class="layout__navBar" />
+        <NavBarMobile class="layout__navBarMobile" />
+        <main class="layout__main">
             <div class="main__left" />
             <slot class="main__center" />
             <div class="main__right" />
@@ -12,20 +10,32 @@
     </div>
 </template>
 
-<script></script>
+<script setup>
+</script>
 
 <style lang="scss" scoped>
 
-.main {
-    @apply flex flex-col items-center;
-
-    &__left,
-    &__right {
-        @apply w-40
+.layout {
+    &__navBar {
+        @apply hidden sm:flex;
     }
 
-    &__center {
-        @apply container mx-auto;
+    &__navBarMobile {
+        @apply flex sm:hidden;
+    }
+
+    &__main {
+        @apply flex flex-col items-center;
+
+        &__left,
+        &__right {
+            @apply w-40
+        }
+
+        &__center {
+            @apply container mx-auto;
+        }
     }
 }
+
 </style>

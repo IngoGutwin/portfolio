@@ -93,6 +93,10 @@
 @screen md {
     .intro {
         @apply w-10/12;
+
+        &__heading--h2 {
+            @apply text-7xl;
+        }
     }
 }
 
