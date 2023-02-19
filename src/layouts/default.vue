@@ -1,7 +1,16 @@
 <template>
-    <div class="layout">
-        <NavBar class="layout__navBar" />
-        <NavBarMobile class="layout__navBarMobile" />
+    <div
+        id="layout"
+        class="layout"
+    >
+        <NavBar
+            class="layout__navBar"
+            :class="{'transform-none': !scrollUp}"
+        />
+        <NavBarMobile
+            class="layout__navBarMobile"
+            :class="{'transform-none': !scrollUp}"
+        />
         <main class="layout__main">
             <div class="layout__main__left" />
             <slot class="layout__main__center" />
@@ -10,18 +19,45 @@
     </div>
 </template>
 
-<script setup>
+<script>
+export default {
+    data () {
+        return {
+            scrollUp: true,
+            newScrollY: 0,
+            oldScrollY: 0
+        }
+    },
+    beforeMount () {
+        window.addEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+        handleScroll () {
+            this.newScrollY = window.scrollY
+            if (this.oldScrollY > this.newScrollY) {
+                this.scrollUp = true
+                console.log('it scrolls up')
+                this.oldScrollY = this.newScrollY
+                console.log(`scroll down newY-${this.newScrollY} oldY-${this.oldScrollY}`)
+            } else if (this.oldScrollY < this.newScrollY) {
+                this.scrollUp = false
+                this.oldScrollY = this.newScrollY - 1
+            }
+        }
+    }
+}
+
 </script>
 
 <style lang="scss" scoped>
 
 .layout {
     &__navBar {
-        @apply hidden sm:flex;
+        @apply hidden sm:flex fixed;
     }
 
     &__navBarMobile {
-        @apply flex sm:hidden;
+        @apply flex sm:hidden fixed;
     }
 
     &__main {

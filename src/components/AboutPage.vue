@@ -105,7 +105,7 @@ export default {
             top: 0;
             width: 100%;
             height: 100%;
-            z-index: 10;
+            z-index: 1;
             background-color: theme('colors.aquamarine.500');
             opacity: .5;
             border-radius: 2em;

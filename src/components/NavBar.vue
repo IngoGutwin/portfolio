@@ -1,5 +1,8 @@
 <template>
-    <nav class="navbar">
+    <nav
+        class="navbar"
+        :class="{'slide-down': scrollUp}"
+    >
         <NuxtLink to="/">
             <IconsLoGo class="navbar__logo" />
         </NuxtLink>
@@ -21,6 +24,7 @@
 
 <script>
 export default {
+    props: { scrollUp: { type: Boolean, required: true } },
     data () {
         return {
             navBar: [
@@ -36,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-    @apply flex justify-between p-2 font-Shure-Tech-sans px-14 w-full mt-2 sticky top-0;
+    @apply flex justify-between p-2 font-Shure-Tech-sans px-14 w-full top-0 z-50 bg-blue-zodiac-500/60 backdrop-blur-md;
 
     &__logo {
         @apply w-28;

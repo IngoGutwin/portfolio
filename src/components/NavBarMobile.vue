@@ -36,6 +36,7 @@
 
 <script setup>
 import { reactive, computed } from 'vue'
+
 const navBar = reactive({
     navBarItems: [
         { name: 'home', number: '.01', path: '/', hash: '#home' },
@@ -44,6 +45,7 @@ const navBar = reactive({
         { name: 'blog', number: '.04', path: '/blog', hash: '#/#' }],
     navBarToggle: false
 })
+
 computed(() => {
     return navBar
 })
@@ -58,14 +60,14 @@ const toggleNavbar = () => {
 
 <style lang="scss" scoped>
 .nav-mobile {
-        @apply flex justify-between p-2 font-Shure-Tech-sans px-8 w-full mt-2 top-0 sticky z-30;
+        @apply transition ease-out flex justify-between pr-4 font-Shure-Tech-sans w-full top-0 z-50 sticky bg-blue-zodiac-500/80;
 
         &__logo {
             @apply w-24;
         }
 
         &__toggle {
-            @apply transition ease-out bg-blue-zodiac-500 fixed top-5 right-10 w-12 h-14 z-50 flex gap-2 flex-col justify-center;
+            @apply transition ease-out w-12 h-14 z-50 mt-4 flex gap-2 flex-col justify-center;
 
             &__item{
                 @apply bg-aquamarine-700 rounded-lg w-10 h-1 self-center;
@@ -74,7 +76,7 @@ const toggleNavbar = () => {
         }
 
         &__box {
-            @apply flex flex-col pt-36 pl-8 gap-12 fixed top-0 right-0 bg-blue-zodiac-500 w-6/12 h-screen transition ease-linear translate-x-full;
+            @apply flex flex-col pt-36 pl-8 gap-12 backdrop-blur-md fixed top-0 right-0 w-6/12 h-screen transition ease-linear translate-x-full;
 
             &--item {
                 @apply mx-1 p-4 text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500;
@@ -95,7 +97,7 @@ const toggleNavbar = () => {
         }
 
         .toggeled{
-                @apply transition ease-out translate-x-5;
-            }
+            @apply transition ease-out translate-x-5;
+        }
     }
 </style>

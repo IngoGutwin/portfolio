@@ -24,7 +24,7 @@
 <style lang="scss" scoped>
 
 .intro {
-    @apply flex flex-col gap-10 self-center mt-24 min-h-[550px] w-10/12;
+    @apply flex flex-col justify-center gap-10 mt-24 min-h-[550px] w-10/12;
 
     &__heading {
         @apply max-w-sm px-7;
