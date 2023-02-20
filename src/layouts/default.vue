@@ -24,7 +24,7 @@
 
         &__left,
         &__right {
-            @apply w-40 h-screen;
+            @apply w-40;
         }
 
         &__center {
