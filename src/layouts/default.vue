@@ -20,7 +20,7 @@
 .layout {
 
     &__main {
-        @apply flex flex-col items-center;
+        @apply flex flex-col items-center gap-20;
 
         &__left,
         &__right {

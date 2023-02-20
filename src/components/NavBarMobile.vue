@@ -1,7 +1,7 @@
 <template>
     <nav
         class="nav-mobile"
-        :class="{'-translate-y-40': !scrollUp}"
+        :class="{'-translate-y-40': !scrollUp && !navBarToggle}"
     >
         <NuxtLink to="/">
             <IconsHaiGuaiLogo class="nav-mobile__logo" />
@@ -11,9 +11,10 @@
             :class="{turn: navBarToggle}"
             @click="toggleNavbar"
         >
-            <div class="nav-mobile__toggle__item" />
-            <div class="nav-mobile__toggle__item" />
-            <div class="nav-mobile__toggle__item" />
+            <div
+                v-for="n in 3"
+                class="nav-mobile__toggle__item"
+            />
         </div>
         <ul
             class="nav-mobile__box"
@@ -78,40 +79,75 @@ export default {
 
 <style lang="scss" scoped>
 .nav-mobile {
-        @apply transition ease-out flex justify-between pr-4 font-Shure-Tech-sans w-full top-0 z-50 fixed md:bg-blue-zodiac-500/80 md:backdrop-blur-md;
+    @apply transition ease-out flex justify-between items-center pr-4 font-Shure-Tech-sans w-full top-0 z-50 fixed;
+
+    &__logo {
+        @apply w-24 md:w-36;
+    }
+
+    &__toggle {
+        @apply transition ease-out w-12 h-14 z-50 flex gap-2 flex-col justify-center;
+
+        &__item{
+            @apply rounded-lg bg-aquamarine-800 w-10 h-1 self-center;
+        }
+
+        &:hover & {
+            &__item {
+                background-color: theme('colors.aquamarine.400');
+            }
+        }
+    }
+
+    &__box {
+        @apply flex flex-col pt-36 pl-8 gap-12 fixed top-0 right-0 w-6/12 bg-blue-zodiac-500/60 backdrop-blur-sm h-screen transition ease-linear translate-x-full;
+
+        &--item {
+            @apply mx-1 max-w-min text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500 p-6;
+
+            span {
+                @apply mr-1 text-aquamarine-500;
+            }
+        }
+
+    }
+
+    .turn {
+        @apply transition ease-out rotate-180 hue-rotate-15;
+    }
+
+    .toggeled{
+        @apply transition ease-out translate-x-5;
+    }
+}
+
+@screen md {
+    .nav-mobile {
+        @apply bg-blue-zodiac-500/60 backdrop-blur-sm;
 
         &__logo {
-            @apply w-24;
+            @apply md:w-36;
         }
 
         &__toggle {
-            @apply transition ease-out w-12 h-14 z-50 mt-4 flex gap-2 flex-col justify-center md:hidden;
+            @apply md:hidden;
 
             &__item{
-                @apply bg-aquamarine-700 rounded-lg w-10 h-1 self-center;
             }
 
         }
 
         &__box {
-            @apply flex flex-col md:flex-row md:justify-end md:self-center pt-36 pl-8 md:pt-4 gap-12 fixed md:static bg-blue-zodiac-500/80 md:bg-none backdrop-blur-md md:backdrop-blur-none top-0 right-0 w-6/12 md:w-full h-screen md:h-10 transition ease-linear translate-x-full md:transform-none;
+            @apply flex-row justify-end pt-4 static bg-white/0 backdrop-blur-none w-full h-full transform-none;
 
             &--item {
-                @apply mx-1 text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500 self-center p-6;
+                @apply self-center;
 
                 span {
-                    @apply mr-1 text-aquamarine-500;
                 }
             }
 
         }
-
-        .turn {
-            @apply transition ease-out rotate-90;
-        }
-
-        .toggeled{
-            @apply transition ease-out translate-x-5;
-        }
     }
+}
 </style>
