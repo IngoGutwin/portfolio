@@ -80,7 +80,7 @@ export default {
 
 <style lang="scss" scoped>
 .navBar {
-    @apply transition ease-out flex justify-between items-center pr-4 font-Shure-Tech-sans w-full top-0 z-50 fixed;
+    @apply transition ease-out duration-500 flex justify-between items-center pr-4 font-Shure-Tech-sans w-full top-0 z-50 fixed;
 
     &__logo {
         @apply w-24;
