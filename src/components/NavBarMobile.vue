@@ -1,29 +1,30 @@
 <template>
     <nav
-        class="nav-mobile"
+        class="navBar"
         :class="{'-translate-y-40': !scrollUp && !navBarToggle}"
     >
         <NuxtLink to="/">
-            <IconsHaiGuaiLogo class="nav-mobile__logo" />
+            <IconsHaiGuaiLogo class="navBar__logo" />
         </NuxtLink>
         <div
-            class="nav-mobile__toggle"
+            class="navBar__toggle"
             :class="{turn: navBarToggle}"
             @click="toggleNavbar"
         >
             <div
                 v-for="n in 3"
-                class="nav-mobile__toggle__item"
+                :key="n"
+                class="navBar__toggle__item"
             />
         </div>
         <ul
-            class="nav-mobile__box"
+            class="navBar__box"
             :class="{toggeled: navBarToggle}"
         >
             <li
                 v-for="item in navBarItems"
                 :key="item"
-                class="nav-mobile__box--item"
+                class="navBar__box--item"
             >
                 <NuxtLink
                     :to="{path:`${item.path}`, hash:`${item.hash}`}"
@@ -78,11 +79,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-mobile {
+.navBar {
     @apply transition ease-out flex justify-between items-center pr-4 font-Shure-Tech-sans w-full top-0 z-50 fixed;
 
     &__logo {
-        @apply w-24 md:w-36;
+        @apply w-24;
     }
 
     &__toggle {
@@ -103,7 +104,7 @@ export default {
         @apply flex flex-col pt-36 pl-8 gap-12 fixed top-0 right-0 w-6/12 bg-blue-zodiac-500/60 backdrop-blur-sm h-screen transition ease-linear translate-x-full;
 
         &--item {
-            @apply mx-1 max-w-min text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500 p-6;
+            @apply mx-1 max-w-min text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500 p-4;
 
             span {
                 @apply mr-1 text-aquamarine-500;
@@ -122,19 +123,15 @@ export default {
 }
 
 @screen md {
-    .nav-mobile {
+    .navBar {
         @apply bg-blue-zodiac-500/60 backdrop-blur-sm;
 
         &__logo {
-            @apply md:w-36;
+            @apply w-36;
         }
 
         &__toggle {
-            @apply md:hidden;
-
-            &__item{
-            }
-
+            @apply hidden;
         }
 
         &__box {
@@ -142,9 +139,6 @@ export default {
 
             &--item {
                 @apply self-center;
-
-                span {
-                }
             }
 
         }
