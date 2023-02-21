@@ -11,7 +11,7 @@
             </h2>
         </div>
         <div class="projects__description">
-            this section is comming soon :)
+            <TheProject :projects-data="projectsData" />
         </div>
     </section>
 </template>
@@ -20,8 +20,17 @@
 export default {
     data () {
         return {
-
+            projectsData: []
         }
+    },
+    beforeMount () {
+        fetch('https://api.github.com/users/ingogutwin/repos')
+            .then(response => response.json())
+            .then((data) => {
+                this.projectsData = data.filter(item => !item.fork)
+                console.table(this.projects)
+                this.projectsData.forEach(item => console.log(item.keys_url))
+            }).catch(error => console.error(error))
     }
 }
 
@@ -41,19 +50,13 @@ export default {
                 @apply font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-aquamarine-700 to-blue-zodiac-50;
             }
 
-            > span::after {
-                content: "";
-                position: absolute;
-                margin: .8rem 0  0 2rem;
-                width: 20%;
-                border: solid 1px theme("colors.zinc.700");
-            }
         }
     }
 
     &__description {
-        @apply text-aquamarine-500 text-5xl font-bold animate-bounce m-auto;
+        @apply mx-auto;
     }
+
 }
 
 </style>

@@ -68,9 +68,7 @@ export default {
             this.newScrollY = window.scrollY
             if (this.oldScrollY > this.newScrollY) {
                 this.scrollUp = true
-                console.log('it scrolls up')
                 this.oldScrollY = this.newScrollY
-                console.log(`scroll down newY-${this.newScrollY} oldY-${this.oldScrollY}`)
             } else if (this.oldScrollY < this.newScrollY) {
                 this.scrollUp = false
                 this.oldScrollY = this.newScrollY - 1
