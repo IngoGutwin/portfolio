@@ -17,10 +17,9 @@
 </script>
 
 <style lang="scss">
-
 .layout {
     display: grid;
-    grid-template-columns: 5% 90% 5%;
+    grid-template-columns: 10% 85% 5%;
     grid-template-areas:
         'navbar navbar navbar'
         'barLeft content barRight'
@@ -34,7 +33,7 @@
 
     &__left {
         grid-area: barLeft;
-        @apply hidden md:flex flex-col fixed left-3 gap-6 justify-center h-screen;
+        @apply hidden md:flex flex-col fixed w-[6%] gap-6 justify-center items-center h-screen;
     }
 
     &__center {
