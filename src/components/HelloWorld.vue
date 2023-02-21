@@ -1,5 +1,6 @@
 <template>
     <section
+        id="home"
         class="intro"
     >
         <h1 class="intro__heading--h1">
@@ -24,7 +25,7 @@
 <style lang="scss" scoped>
 
 .intro {
-    @apply flex flex-col justify-center gap-10 mt-24 min-h-[550px] w-10/12;
+    @apply flex flex-col justify-center gap-10 h-screen min-h-[550px] w-10/12;
 
     &__heading {
         @apply max-w-sm px-7;
@@ -40,7 +41,7 @@
             @apply font-bold font-Public-sans-serif text-zinc-400 text-5xl;
 
             > span {
-                @apply font-bold font-Open-Dyslex-serif bg-clip-text text-transparent animate-bounce;
+                @apply font-bold font-Open-Dyslex-serif bg-clip-text text-transparent;
             }
             > span:nth-child(1) {
                 @apply bg-gradient-to-r from-aquamarine-700 to-blue-zodiac-50;

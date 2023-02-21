@@ -16,13 +16,10 @@
 </template>
 
 <script>
-export default {
-
-}
 </script>
 
 <style lang="scss" scoped>
 .icon-git-hub {
-
+    @apply w-8 h-8;
 }
 </style>

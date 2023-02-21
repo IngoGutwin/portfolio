@@ -14,7 +14,7 @@
 
 <style lang="scss">
 .article {
-    @apply max-w-sm px-4 mt-10 sm:mt-32 sm:max-w-xl md:max-w-2xl lg:w-10/12 lg:max-w-5xl mx-auto;
+    @apply max-w-sm px-4 mt-20 sm:mt-32 sm:max-w-xl md:max-w-2xl lg:w-10/12 lg:max-w-5xl mx-auto justify-center;
 
     ul {
         @apply ml-8;
