@@ -1,7 +1,7 @@
 <template>
     <HelloWorld />
     <AboutPage />
-    <MyWork />
+    <MyProjects />
 </template>
 
 <script>
