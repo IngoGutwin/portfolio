@@ -1,7 +1,11 @@
 <template>
     <div class="layout">
         <NavBar class="layout__navbar" />
-        <div class="layout__left" />
+        <div class="layout__left">
+            <IconsGitHub />
+            <IconsTwitteR />
+            <IconsLinkedIn />
+        </div>
         <div class="layout__center">
             <slot />
         </div>
@@ -16,9 +20,10 @@
 
 .layout {
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 5% 90% 5%;
     grid-template-areas:
         'navbar navbar navbar'
+        'barLeft content barRight'
         'barLeft content barRight'
         'barLeft content barRight'
     ;
@@ -29,7 +34,7 @@
 
     &__left {
         grid-area: barLeft;
-        @apply h-screen;
+        @apply hidden md:flex flex-col fixed left-3 gap-6 justify-center h-screen;
     }
 
     &__center {
