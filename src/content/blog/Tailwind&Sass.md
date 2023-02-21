@@ -4,13 +4,13 @@ This guide will show you how to install and utilize Tailwind CSS and Sass in you
 
 ## PREREQUISITES
 
-Before getting started, please make sure you have set up a new project as mentioned here 👉 [Nuxt3 Project](newProjectNuxt3.md).
+Before getting started, please make sure you have set up a new project as mentioned here :point_right: [Nuxt3 Project](newProjectNuxt3.md).
 
 ### If you already have a new project, let's jump right in
 
 ### Install all the dependecies 
 
-Install all the dependencies by typing the following commands in your terminal:
+Install all the dependencies by typing the following commands in your terminal: :computer:
 
 ```
 
@@ -19,11 +19,11 @@ sass-loader node-sass sass.
 
 ```
 
-### Then, initialize the tailwind.config file by running the command:
+### Then, initialize the tailwind.config file by running the command: :computer:
 
 npx tailwindcss init
 
-### Update the tailwind.config.js file with the following content:
+### Update the tailwind.config.js file with the following content: :computer:
 
 ```javascript
 
@@ -43,7 +43,7 @@ module.exports = {
 
 ```
 
-### update you nuxt.config.ts
+### update you nuxt.config.ts :computer:
 
 ```javascript
 
@@ -63,7 +63,7 @@ export default defineNuxtConfig({
 
 ```
 
-### Now, create the necessary folders and files:
+### Now, create the necessary folders and files: :keyboard:
 
 - [x] Folders: components, assets/css, pages, layout -> (optional)
 
