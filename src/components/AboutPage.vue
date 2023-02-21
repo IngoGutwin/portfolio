@@ -7,7 +7,7 @@
             <h2
                 class="about__info__heading"
             >
-                .01 <span>About Me</span>
+                .02 <span>About Me</span>
             </h2>
             <p class="about__info__description">
                 Hi, my name is Ingo and I really love creating things with code.
@@ -32,9 +32,7 @@
                 </li>
             </ul>
         </div>
-        <div class="about__photo">
-            <MyPhoto class="about__photo__item" />
-        </div>
+        <div class="about__photo" />
     </section>
 </template>
 
@@ -56,10 +54,10 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-    @apply flex flex-wrap min-h-[550px] py-16 w-11/12;
+    @apply flex flex-wrap min-h-[550px] py-16 w-11/12 h-screen;
 
     &__info {
-        @apply flex flex-col gap-5 w-11/12 mx-auto;
+        @apply flex flex-col gap-5 w-11/12 mx-auto self-center;
 
         &__heading {
             @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl;
@@ -91,15 +89,9 @@ export default {
     }
 
     &__photo {
-        width: clamp(20em, 1em, 45em);
-        height: 15em;
-        margin: auto;
+        @apply bg-photo bg-center bg-cover h-2/6 w-8/12 self-center mx-auto sm:w-6/12 md:w-3/12 relative rounded-[2em];
 
-        &__item {
-            @apply w-full h-full relative rounded-[2rem];
-        }
-
-        &__item::before {
+        &::before {
             content: "";
             position: absolute;
             top: 0;
@@ -112,11 +104,11 @@ export default {
             transition: opacity 500ms;
         }
 
-        &__item:hover::before {
+        &:hover::before {
             opacity: 0.03;
         }
 
-        &__item::after {
+        &::after {
             content: "";
             position: absolute;
             top: 0;
@@ -131,7 +123,7 @@ export default {
             transition: margin 300ms;
         }
 
-        &__item:hover::after {
+        &:hover::after {
             margin: 0 0 0 0;
         }
 
@@ -150,7 +142,7 @@ export default {
 
 @screen lg {
     .about {
-        @apply w-8/12;
+        @apply w-9/12;
     }
 }
 

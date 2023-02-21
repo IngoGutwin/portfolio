@@ -50,7 +50,7 @@ module.exports = {
                 'moon-raker': '#CCD6F6'
             },
             backgroundImage: {
-                photo: "url('@@/src/assets/images/photo.png')"
+                photo: "url('@@/src/assets/images/myPhoto.png')"
             }
         }
     }

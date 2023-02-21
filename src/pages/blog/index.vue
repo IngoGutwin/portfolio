@@ -30,7 +30,7 @@
 
 <style lang="scss" scoped>
 .content-list {
-    @apply flex flex-col w-11/12 md:max-w-3xl;
+    @apply flex flex-col justify-center w-11/12 md:max-w-3xl h-screen;
 
     &__block {
         @apply p-4 rounded-xl text-aquamarine-200 hover:shadow-md hover:shadow-aquamarine-500 text-center;

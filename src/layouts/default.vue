@@ -1,35 +1,45 @@
 <template>
-    <div
-        id="layout"
-        class="layout"
-    >
-        <NavBarMobile />
-        <main class="layout__main">
-            <div class="layout__main__left" />
-            <slot class="layout__main__center" />
-            <div class="layout__main__right" />
-        </main>
+    <div class="layout">
+        <NavBar class="layout__navbar" />
+        <div class="layout__left" />
+        <div class="layout__center">
+            <slot />
+        </div>
+        <div class="layout__right" />
     </div>
 </template>
 
 <script>
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 .layout {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas:
+        'navbar navbar navbar'
+        'barLeft content barRight'
+        'barLeft content barRight'
+    ;
 
-    &__main {
-        @apply flex flex-col items-center gap-20;
+    &__navbar {
+        grid-area: navbar;
+    }
 
-        &__left,
-        &__right {
-            @apply w-40;
-        }
+    &__left {
+        grid-area: barLeft;
+        @apply h-screen;
+    }
 
-        &__center {
-            @apply container mx-auto;
-        }
+    &__center {
+        grid-area: content;
+        @apply flex flex-col items-center;
+    }
+
+    &__right {
+        grid-area: barRight;
+        @apply h-screen;
     }
 }
 

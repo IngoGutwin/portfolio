@@ -1,6 +1,7 @@
 <template>
     <HelloWorld />
     <AboutPage />
+    <MyWork />
 </template>
 
 <script>
