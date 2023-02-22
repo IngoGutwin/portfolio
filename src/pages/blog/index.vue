@@ -33,7 +33,7 @@
     @apply flex flex-col justify-center w-11/12 md:max-w-3xl h-screen;
 
     &__block {
-        @apply p-4 rounded-xl text-aquamarine-200 hover:shadow-md hover:shadow-aquamarine-500 text-center;
+        @apply p-4 rounded-xl text-moon-raker hover:shadow-md hover:shadow-aquamarine-500 text-center;
 
         &--heading {
             @apply py-4 text-2xl font-bold text-aquamarine-500;

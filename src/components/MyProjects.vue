@@ -28,8 +28,6 @@ export default {
             .then(response => response.json())
             .then((data) => {
                 this.projectsData = data.filter(item => !item.fork)
-                console.table(this.projects)
-                this.projectsData.forEach(item => console.log(item.keys_url))
             }).catch(error => console.error(error))
     }
 }
@@ -41,7 +39,7 @@ export default {
     @apply flex flex-col min-h-[550px] py-16 w-11/12 h-screen;
 
     &__info {
-        @apply flex flex-col gap-5 w-11/12 mx-auto self-center;
+        @apply w-11/12 mx-auto;
 
         &__heading {
             @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl;
@@ -49,12 +47,11 @@ export default {
             > span {
                 @apply font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-aquamarine-700 to-blue-zodiac-50;
             }
-
         }
     }
 
     &__description {
-        @apply mx-auto;
+        @apply mx-auto w-11/12;
     }
 
 }
