@@ -57,7 +57,7 @@ export default {
     @apply flex flex-wrap min-h-[550px] py-16 w-11/12 h-screen;
 
     &__info {
-        @apply flex flex-col gap-5 w-11/12 mx-auto self-center;
+        @apply flex flex-col gap-5 mx-auto self-center;
 
         &__heading {
             @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl;
@@ -71,7 +71,7 @@ export default {
                 position: absolute;
                 margin: .8rem 0  0 2rem;
                 width: 20%;
-                border: solid 1px theme("colors.zinc.700");
+                border: solid 1px theme("colors.moon-raker");
             }
         }
 

@@ -24,7 +24,7 @@ export default {
         removeDisabled () {
             this.checkboxes.forEach(item => {
                 const attributes = ['disabled', 'checked']
-                for (let i = 0; i < 2; i++) {
+                for (let i = 0; i < attributes.length; i++) {
                     item.removeAttribute(attributes[i])
                 }
                 console.log(item)

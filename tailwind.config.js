@@ -50,7 +50,11 @@ module.exports = {
                 'moon-raker': '#CCD6F6'
             },
             backgroundImage: {
-                photo: "url('@@/src/assets/images/myPhoto.png')"
+                photo: "url('@@/src/assets/images/photo.png')",
+                art_gallery: "url('@@/src/assets/images/art-gallery.png')",
+                space_tourism: "url('@@/src/assets/images/space-tourism.png')",
+                todo_app: "url('@@/src/assets/images/todo-app.png')",
+                portfolio: "url('@@/src/assets/images/portfolio.png')"
             }
         }
     }
