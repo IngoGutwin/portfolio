@@ -33,9 +33,6 @@ export default {
                 .then(response => response.json())
                 .then((data) => {
                     this.projectsData = data.filter(item => !item.fork && item.homepage)
-                    this.projectsData.forEach(item => {
-                        console.log(item.topics)
-                    })
                 }).catch(error => console.error(error))
         }
     }
