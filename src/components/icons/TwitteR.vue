@@ -24,6 +24,6 @@
 
 <style lang="scss" scoped>
 .icon-twitter {
-    @apply w-8 h-8 stroke-moon-raker hover:stroke-aquamarine-500;
+    @apply w-6 md:w-8 stroke-moon-raker hover:stroke-aquamarine-500;
 }
 </style>
