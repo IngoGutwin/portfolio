@@ -32,7 +32,10 @@
                     <span>{{ item.number }}</span>{{ item.name }}
                 </NuxtLink>
             </li>
-            <IconsGitHub class="md:hidden ml-4" />
+            <IconsGitHub
+                :endpoint="`profile`"
+                class="md:hidden ml-4"
+            />
             <IconsTwitteR class="md:hidden ml-4" />
             <IconsLinkedIn class="md:hidden ml-4" />
         </ul>
@@ -40,6 +43,8 @@
 </template>
 
 <script>
+import { debounce } from 'lodash-es'
+
 export default {
     data () {
         return {
@@ -56,7 +61,9 @@ export default {
         }
     },
     beforeMount () {
-        window.addEventListener('scroll', this.handleScroll)
+        window.addEventListener('scroll', debounce(() => {
+            this.handleScroll()
+        }, 200))
     },
     methods: {
         toggleNavbar () {
@@ -68,12 +75,10 @@ export default {
             this.newScrollY = window.scrollY
             if (this.oldScrollY > this.newScrollY) {
                 this.scrollUp = true
-                console.log('it scrolls up')
                 this.oldScrollY = this.newScrollY
-                console.log(`scroll down newY-${this.newScrollY} oldY-${this.oldScrollY}`)
             } else if (this.oldScrollY < this.newScrollY) {
                 this.scrollUp = false
-                this.oldScrollY = this.newScrollY - 1
+                this.oldScrollY = this.newScrollY
             }
         }
     }

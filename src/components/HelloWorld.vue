@@ -38,7 +38,7 @@
             }
         }
         &--h2 {
-            @apply font-bold font-Public-sans-serif text-zinc-400 text-5xl;
+            @apply font-bold font-Public-sans-serif text-moon-raker text-5xl;
 
             > span {
                 @apply font-bold font-Open-Dyslex-serif bg-clip-text text-transparent;

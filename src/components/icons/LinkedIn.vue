@@ -38,6 +38,6 @@ export default {
 
 <style lang="scss" scoped>
 .icon-linkedid {
-    @apply w-8 h-8 stroke-zinc-400 hover:stroke-aquamarine-500;
+    @apply w-8 h-8 stroke-moon-raker hover:stroke-aquamarine-500;
 }
 </style>

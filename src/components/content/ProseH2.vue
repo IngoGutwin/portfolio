@@ -1,7 +1,7 @@
 <template>
     <h2
         :id="id"
-        class="text-xl font-bold my-4 text-aquamarine-500 uppercase font-Public-sans-serif"
+        class="text-xl font-bold my-4 text-moon-raker uppercase font-Public-sans-serif"
     >
         <slot />
     </h2>

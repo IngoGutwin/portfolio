@@ -57,7 +57,7 @@ export default {
     @apply flex flex-wrap min-h-[550px] py-16 w-11/12 h-screen;
 
     &__info {
-        @apply flex flex-col gap-5 w-11/12 mx-auto self-center;
+        @apply flex flex-col gap-5 mx-auto self-center;
 
         &__heading {
             @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl;
@@ -71,7 +71,7 @@ export default {
                 position: absolute;
                 margin: .8rem 0  0 2rem;
                 width: 20%;
-                border: solid 1px theme("colors.zinc.700");
+                border: solid 1px theme("colors.moon-raker");
             }
         }
 
@@ -89,7 +89,7 @@ export default {
     }
 
     &__photo {
-        @apply bg-photo bg-center bg-cover h-2/6 w-8/12 self-center mx-auto sm:w-6/12 md:w-3/12 relative rounded-[2em] hover:bg-aquamarine-500/75;
+        @apply bg-photo bg-center bg-cover h-2/6 w-8/12 self-center mx-auto sm:w-6/12 md:w-3/12 relative rounded-[2em] hover:bg-blue-zodiac-400/75;
 
         &::before {
             content: "";

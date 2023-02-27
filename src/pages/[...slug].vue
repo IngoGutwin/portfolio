@@ -9,7 +9,29 @@
     </ContentDoc>
 </template>
 
-<script setup>
+<script>
+export default {
+    data () {
+        return {
+            checkboxes: []
+        }
+    },
+    beforeMount () {
+        this.checkboxes = document.querySelectorAll('input')
+        this.removeDisabled()
+    },
+    methods: {
+        removeDisabled () {
+            this.checkboxes.forEach(item => {
+                const attributes = ['disabled', 'checked']
+                for (let i = 0; i < attributes.length; i++) {
+                    item.removeAttribute(attributes[i])
+                }
+                console.log(item)
+            })
+        }
+    }
+}
 </script>
 
 <style lang="scss">
