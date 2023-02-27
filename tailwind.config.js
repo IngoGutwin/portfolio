@@ -57,7 +57,7 @@ module.exports = {
                 portfolio: "url('@@/src/assets/images/portfolio.png')"
             },
             gridTemplateRows: {
-                xs: 'minmax(0, 5em) minmax(0, 1fr) minmax(0, 5em) minmax(0, 5em)',
+                xs: 'minmax(0, 5em) minmax(0, 1fr) minmax(3rem, 5rem) minmax(3rem, 5em)',
                 md: 'minmax(0, 5em) minmax(0, 1fr) minmax(0, 5em)'
             }
         }

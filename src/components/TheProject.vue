@@ -1,4 +1,4 @@
-template>
+<template>
     <li
         v-for="project in projectsData"
         :key="project"
@@ -56,19 +56,19 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-        @apply grid grid-cols-12 grid-rows-xs bg-blue-zodiac-500/70 hover:bg-blue-zodiac-500/60 rounded-lg hover:shadow-lg hover:shadow-aquamarine-500 xs:p-4;
+        @apply grid grid-cols-12 grid-rows-xs bg-blue-zodiac-500/70 hover:bg-blue-zodiac-500/60 rounded-lg hover:shadow-lg hover:shadow-aquamarine-500 p-1 xs:p-4;
 
         &__heading {
-            @apply col-start-1 col-span-4 row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif bg-clip-text text-transparent bg-gradient-to-l from-aquamarine-700 to-blue-zodiac-50 py-4;
+            @apply col-start-1 col-span-6 row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif bg-clip-text text-transparent bg-gradient-to-l from-aquamarine-700 to-blue-zodiac-50 py-4;
         }
 
         &__description {
-            @apply col-start-1 col-span-full row-start-2 py-2 text-xs text-aquamarine-300;
+            @apply col-start-1 col-span-full row-start-2 row-span-2 py-2 text-xs text-aquamarine-300;
 
         }
 
         &__topics {
-            @apply flex flex-wrap gap-4 col-span-full;
+            @apply flex flex-wrap gap-3 col-span-full row-start-5 uppercase;
 
             &--topic {
                 @apply min-w-fit text-lg text-aquamarine-500;
@@ -76,7 +76,7 @@ export default {
         }
 
         &__icons {
-            @apply flex gap-4 col-span-full row-start-3 self-center;
+            @apply flex gap-4 col-span-full row-start-4 self-center;
         }
 
         &--art-gallery {
@@ -99,6 +99,10 @@ export default {
 
         &__description {
             @apply col-start-1 col-span-6 row-start-2 p-8 my-8 bg-blue-zodiac-300 rounded-lg;
+        }
+
+        &__topics {
+            @apply text-xl;
         }
 
         &__icons {
