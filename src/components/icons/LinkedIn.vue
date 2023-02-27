@@ -11,7 +11,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="icon-linkedid"
+            class="icon-linkedin"
         >
             <title>LinkedIn</title>
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.icon-linkedid {
-    @apply w-8 h-8 stroke-moon-raker hover:stroke-aquamarine-500;
+.icon-linkedin {
+    @apply w-6 md:w-8 stroke-moon-raker hover:stroke-aquamarine-500;
 }
 </style>
