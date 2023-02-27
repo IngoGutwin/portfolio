@@ -45,10 +45,10 @@ export default {
     @apply gap-5 py-16 w-full lg:w-10/12 xl:w-7/12;
 
     &__info {
-        @apply mx-auto my-7 flex justify-start w-11/12;
+        @apply mx-auto flex justify-start w-11/12;
 
         &__heading {
-            @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl mb-20;
+            @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl mb-5;
 
             > span {
                 @apply font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-aquamarine-700 to-blue-zodiac-50;
