@@ -1,33 +1,32 @@
 <template>
-    <section>
-        <div
-            v-for="project in projectsData"
-            :key="project"
-            class="project"
+    <li
+        v-for="project in projectsData"
+        :key="project"
+        class="project"
+    >
+        <h2
+            class="project__heading"
         >
-            <div class="project__info">
-                <h2
-                    v-if="project.homepage"
-                    class="project__info__heading"
-                >
-                    {{ transformTitle(project.name, 'heading') }}
-                </h2>
+            {{ transformTitle(project.name, 'heading') }}
+        </h2>
 
-                <div class="project__info__description">
-                    {{ project.description }}
-                </div>
+        <div class="project__description">
+            {{ project.description }}
+        </div>
 
-                <NuxtLink
-                    :to="`${project.homepage}`"
-                    target="_blank"
-                    external="true"
-                />
-            </div>
-            <div
-                :class="`project__img--${transformTitle(project.name, 'null')}`"
+        <div class="project__icons">
+            <IconsGitHub
+                :endpoint="project.name"
+            />
+            <IconsExternalLink
+                :endpoint="project.homepage"
             />
         </div>
-    </section>
+
+        <div
+            :class="`project--${transformTitle(project.name, 'null')}`"
+        />
+    </li>
 </template>
 
 <script>
@@ -47,30 +46,60 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-    @apply grid grid-cols-12 h-full;
-
-    &__info {
-        @apply col-start-1 col-span-5;
+        @apply grid grid-cols-12 grid-rows-xs bg-blue-zodiac-500/70 hover:bg-blue-zodiac-500/60 rounded-lg hover:shadow-lg hover:shadow-aquamarine-500 xs:p-4;
 
         &__heading {
-            @apply text-3xl font-bold font-Open-Dyslex-serif text-blue-zodiac-50;
+            @apply col-start-1 col-span-full row-start-1 text-3xl font-bold font-Open-Dyslex-serif text-aquamarine-500 p-4;
+        }
+
+        &__description {
+            @apply col-start-1 col-span-full row-start-2 p-2 text-xs text-aquamarine-300;
+        }
+
+        &__icons {
+            @apply flex gap-4 col-span-full row-start-3 self-center;
+        }
+
+        &--art-gallery {
+            @apply bg-art_gallery rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+        }
+        &--space-tourism {
+            @apply bg-space_tourism rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+        }
+        &--portfolio {
+            @apply bg-portfolio bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+        }
+        &--todo-app {
+            @apply bg-todo_app bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
         }
     }
 
-    &__img {
-        @apply col-start-6 col-span-6;
+@screen md {
+    .project {
+        @apply grid-rows-md;
+
+        &__description {
+            @apply col-start-1 col-span-6 row-start-2 p-8 my-8 bg-blue-zodiac-300 rounded-lg;
+        }
+
+        &__icons {
+            @apply flex-col col-start-12 row-start-1 row-span-2 self-center justify-self-end;
+        }
 
         &--art-gallery {
-            @apply bg-art_gallery;
+            @apply col-start-5 col-span-full row-start-1 row-span-full;
         }
+
         &--space-tourism {
-            @apply bg-space_tourism w-full h-full;
+            @apply col-start-5 col-span-full row-start-1 row-span-full;
         }
+
         &--portfolio {
-            @apply bg-portfolio w-full h-full;
+            @apply col-start-5 col-span-full row-start-1 row-span-full;
         }
+
         &--todo-app {
-            @apply bg-todo_app w-full h-full;
+            @apply col-start-5 col-span-full row-start-1 row-span-full;
         }
     }
 }

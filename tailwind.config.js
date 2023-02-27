@@ -55,6 +55,10 @@ module.exports = {
                 space_tourism: "url('@@/src/assets/images/space-tourism.png')",
                 todo_app: "url('@@/src/assets/images/todo-app.png')",
                 portfolio: "url('@@/src/assets/images/portfolio.png')"
+            },
+            gridTemplateRows: {
+                xs: 'minmax(0, 5em) minmax(0, 1fr) minmax(0, 5em)',
+                md: 'minmax(0, 5em) minmax(0, 1fr)'
             }
         }
     }

@@ -1,6 +1,7 @@
 <template>
     <NuxtLink
-        to="https://github.com/IngoGutwin"
+        target="_blank"
+        :to="endpoint === 'profile' ? baseURL : `${baseURL}/${endpoint}`"
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -20,10 +21,18 @@
 </template>
 
 <script>
+export default {
+    props: { endpoint: { type: String, required: true } },
+    data () {
+        return {
+            baseURL: 'https://github.com/IngoGutwin'
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
 .icon-git-hub {
-    @apply w-8 h-8 stroke-moon-raker hover:stroke-aquamarine-500;
+    @apply w-6 md:w-8 stroke-moon-raker hover:stroke-aquamarine-500;
 }
 </style>

@@ -2,7 +2,7 @@
     <div class="layout">
         <NavBar class="layout__navbar" />
         <div class="layout__left">
-            <IconsGitHub />
+            <IconsGitHub :endpoint="`profile`" />
             <IconsTwitteR />
             <IconsLinkedIn />
         </div>
@@ -19,13 +19,14 @@
 <style lang="scss">
 .layout {
     display: grid;
-    grid-template-columns: 10% 85% 5%;
+    grid-template-columns: 10% 80% 10%;
     grid-template-areas:
         'navbar navbar navbar'
         'barLeft content barRight'
         'barLeft content barRight'
         'barLeft content barRight'
     ;
+    margin-bottom: 10rem;
 
     &__navbar {
         grid-area: navbar;

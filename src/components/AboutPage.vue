@@ -89,7 +89,7 @@ export default {
     }
 
     &__photo {
-        @apply bg-photo bg-center bg-cover h-2/6 w-8/12 self-center mx-auto sm:w-6/12 md:w-3/12 relative rounded-[2em] hover:bg-aquamarine-500/75;
+        @apply bg-photo bg-center bg-cover h-2/6 w-8/12 self-center mx-auto sm:w-6/12 md:w-3/12 relative rounded-[2em] hover:bg-blue-zodiac-400/75;
 
         &::before {
             content: "";

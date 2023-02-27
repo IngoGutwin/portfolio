@@ -10,7 +10,7 @@
                 .03 <span>My Projects</span>
             </h2>
         </div>
-        <div class="projects__every">
+        <div class="projects__all">
             <TheProject :projects-data="projectsData" />
         </div>
     </section>
@@ -32,7 +32,8 @@ export default {
             fetch('https://api.github.com/users/ingogutwin/repos')
                 .then(response => response.json())
                 .then((data) => {
-                    this.projectsData = data.filter(item => !item.fork)
+                    this.projectsData = data.filter(item => !item.fork && item.homepage)
+                    this.projectsData.forEach(item => console.log(item.homepage))
                 }).catch(error => console.error(error))
         }
     }
@@ -42,13 +43,13 @@ export default {
 
 <style lang="scss" scoped>
 .projects {
-    @apply flex flex-col min-h-[550px] gap-5 py-16 w-11/12 h-screen;
+    @apply gap-5 py-16 w-full lg:w-10/12 xl:w-7/12;
 
     &__info {
-        @apply mx-auto flex justify-start w-11/12;
+        @apply mx-auto my-7 flex justify-start w-11/12;
 
         &__heading {
-            @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl;
+            @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl mb-20;
 
             > span {
                 @apply font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-aquamarine-700 to-blue-zodiac-50;
@@ -64,8 +65,8 @@ export default {
         }
     }
 
-    &__every {
-        @apply mx-auto w-11/12 h-screen;
+    &__all {
+        @apply flex flex-col gap-28 mx-auto;
     }
 
 }
