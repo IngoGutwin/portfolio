@@ -1,4 +1,4 @@
-<template>
+template>
     <li
         v-for="project in projectsData"
         :key="project"
@@ -11,8 +11,18 @@
         </h2>
 
         <div class="project__description">
-            {{ project.description }}
+            <p>{{ project.description }}</p>
         </div>
+
+        <ul class="project__topics">
+            <li
+                v-for="topic in project.topics"
+                :key="topic"
+                class="project__topics--topic"
+            >
+                {{ topic }}
+            </li>
+        </ul>
 
         <div class="project__icons">
             <IconsGitHub
@@ -49,11 +59,20 @@ export default {
         @apply grid grid-cols-12 grid-rows-xs bg-blue-zodiac-500/70 hover:bg-blue-zodiac-500/60 rounded-lg hover:shadow-lg hover:shadow-aquamarine-500 xs:p-4;
 
         &__heading {
-            @apply col-start-1 col-span-full row-start-1 text-3xl font-bold font-Open-Dyslex-serif text-aquamarine-500 p-4;
+            @apply col-start-1 col-span-4 row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif bg-clip-text text-transparent bg-gradient-to-l from-aquamarine-700 to-blue-zodiac-50 py-4;
         }
 
         &__description {
-            @apply col-start-1 col-span-full row-start-2 p-2 text-xs text-aquamarine-300;
+            @apply col-start-1 col-span-full row-start-2 py-2 text-xs text-aquamarine-300;
+
+        }
+
+        &__topics {
+            @apply flex flex-wrap gap-4 col-span-full;
+
+            &--topic {
+                @apply min-w-fit text-lg text-aquamarine-500;
+            }
         }
 
         &__icons {
