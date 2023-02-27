@@ -21,17 +21,14 @@
             class="navBar__box"
             :class="{toggeled: navBarToggle}"
         >
-            <li
+            <NuxtLink
                 v-for="item in navBarItems"
                 :key="item"
                 class="navBar__box--item"
+                :to="{path:`${item.path}`, hash:`${item.hash}`}"
             >
-                <NuxtLink
-                    :to="{path:`${item.path}`, hash:`${item.hash}`}"
-                >
-                    <span>{{ item.number }}</span>{{ item.name }}
-                </NuxtLink>
-            </li>
+                <span>{{ item.number }}</span>{{ item.name }}
+            </NuxtLink>
             <IconsGitHub
                 :endpoint="`profile`"
                 class="md:hidden ml-4"
@@ -63,7 +60,7 @@ export default {
     beforeMount () {
         window.addEventListener('scroll', debounce(() => {
             this.handleScroll()
-        }, 200))
+        }, 150))
     },
     methods: {
         toggleNavbar () {

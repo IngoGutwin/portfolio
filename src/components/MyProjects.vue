@@ -7,7 +7,7 @@
             <h2
                 class="projects__info__heading"
             >
-                .03 <span>My Projects</span>
+                .03 <span>Projects</span>
             </h2>
         </div>
         <div class="projects__all">

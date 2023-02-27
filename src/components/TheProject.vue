@@ -61,7 +61,7 @@ export default {
         }
 
         &--art-gallery {
-            @apply bg-art_gallery rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+            @apply bg-art_gallery rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full relative before:content-[''] before:absolute before:w-full before:h-full before:bg-blue-zodiac-500/30 before:z-10;
         }
         &--space-tourism {
             @apply bg-space_tourism rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
@@ -70,7 +70,7 @@ export default {
             @apply bg-portfolio bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
         }
         &--todo-app {
-            @apply bg-todo_app bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+            @apply bg-todo_app bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full relative before:content-[''] before:absolute before:w-full before:h-full before:bg-blue-zodiac-500/30 before:z-10;
         }
     }
 
