@@ -68,7 +68,7 @@ export default {
         }
 
         &__topics {
-            @apply flex flex-wrap gap-3 col-span-full row-start-5 uppercase;
+            @apply flex flex-wrap gap-3 col-span-full row-start-5;
 
             &--topic {
                 @apply min-w-fit text-lg text-aquamarine-500;

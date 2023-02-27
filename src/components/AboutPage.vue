@@ -54,10 +54,10 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-    @apply flex flex-wrap min-h-[550px] py-16 w-11/12 h-screen;
+    @apply flex flex-wrap w-11/12 h-screen my-44;
 
     &__info {
-        @apply flex flex-col gap-5 mx-auto self-center;
+        @apply flex flex-col gap-5 mx-auto;
 
         &__heading {
             @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl;
@@ -89,7 +89,7 @@ export default {
     }
 
     &__photo {
-        @apply bg-photo bg-center bg-cover h-2/6 w-8/12 self-center mx-auto sm:w-6/12 md:w-3/12 relative rounded-[2em] hover:bg-blue-zodiac-400/75;
+        @apply bg-photo bg-center bg-cover h-2/6 w-8/12 mx-auto sm:w-6/12 md:w-3/12 relative rounded-[2em] hover:bg-blue-zodiac-400/75;
 
         &::before {
             content: "";
