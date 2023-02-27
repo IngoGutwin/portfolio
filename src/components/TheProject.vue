@@ -59,7 +59,7 @@ export default {
         @apply grid grid-cols-12 grid-rows-xs bg-blue-zodiac-500/70 hover:bg-blue-zodiac-500/60 rounded-lg hover:shadow-lg hover:shadow-aquamarine-500 p-1 xs:p-4;
 
         &__heading {
-            @apply col-start-1 col-span-6 row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif bg-clip-text text-transparent bg-gradient-to-l from-aquamarine-700 to-blue-zodiac-50 p-4;
+            @apply col-start-1 col-span-full row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif text-blue-zodiac-50 p-4;
         }
 
         &__description {
@@ -106,7 +106,7 @@ export default {
         }
 
         &__icons {
-            @apply flex-col col-start-12 row-start-1 row-span-2 self-center justify-self-end;
+            @apply flex-col col-start-12 row-start-1 row-span-full self-center justify-self-end;
         }
 
         &--art-gallery {
