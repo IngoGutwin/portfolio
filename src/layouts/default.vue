@@ -51,7 +51,7 @@
 
     &__right {
         grid-area: barRight;
-        @apply h-screen flex flex-col justify-center items-center fixed right-0 w-[4%];
+        @apply hidden h-screen md:flex flex-col justify-center items-center fixed right-0 w-[4%];
 
         &__link {
             @apply text-sm rotate-90 text-moon-raker hover:text-aquamarine-500;

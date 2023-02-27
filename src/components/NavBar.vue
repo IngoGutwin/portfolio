@@ -36,6 +36,10 @@
                 />
                 <IconsTwitteR class="md:hidden ml-4" />
                 <IconsLinkedIn class="md:hidden ml-4" />
+                <a
+                    class="text-moon-raker hover:text-aquamarine-500"
+                    href="mailto:ingogutwin@gmail.com"
+                >ingogutwin@gmail.com</a>
             </div>
         </ul>
     </nav>
