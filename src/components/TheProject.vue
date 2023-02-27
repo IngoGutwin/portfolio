@@ -59,11 +59,11 @@ export default {
         @apply grid grid-cols-12 grid-rows-xs bg-blue-zodiac-500/70 hover:bg-blue-zodiac-500/60 rounded-lg hover:shadow-lg hover:shadow-aquamarine-500 p-1 xs:p-4;
 
         &__heading {
-            @apply col-start-1 col-span-6 row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif bg-clip-text text-transparent bg-gradient-to-l from-aquamarine-700 to-blue-zodiac-50 py-4;
+            @apply col-start-1 col-span-6 row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif bg-clip-text text-transparent bg-gradient-to-l from-aquamarine-700 to-blue-zodiac-50 p-4;
         }
 
         &__description {
-            @apply col-start-1 col-span-full row-start-2 row-span-2 py-2 text-xs text-aquamarine-300;
+            @apply col-start-1 col-span-full row-start-2 row-span-2 py-2 text-xs text-aquamarine-300 p-4;
 
         }
 
@@ -76,11 +76,11 @@ export default {
         }
 
         &__icons {
-            @apply flex gap-4 col-span-full row-start-4 self-center;
+            @apply flex gap-4 col-span-full row-start-4 self-center p-4;
         }
 
         &--art-gallery {
-            @apply bg-art_gallery rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full relative before:content-[''] before:absolute before:w-full before:h-full before:bg-blue-zodiac-500/30 before:z-10;
+            @apply bg-art_gallery rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full relative before:content-[''] before:absolute before:w-full before:h-full before:bg-blue-zodiac-500/70 before:z-10;
         }
         &--space-tourism {
             @apply bg-space_tourism rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
@@ -89,7 +89,7 @@ export default {
             @apply bg-portfolio bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
         }
         &--todo-app {
-            @apply bg-todo_app bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full relative before:content-[''] before:absolute before:w-full before:h-full before:bg-blue-zodiac-500/30 before:z-10;
+            @apply bg-todo_app bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full relative before:content-[''] before:absolute before:w-full before:h-full before:bg-blue-zodiac-500/70 before:z-10;
         }
     }
 
