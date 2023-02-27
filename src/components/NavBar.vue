@@ -29,12 +29,14 @@
             >
                 <span>{{ item.number }}</span>{{ item.name }}
             </NuxtLink>
-            <IconsGitHub
-                :endpoint="`profile`"
-                class="md:hidden ml-4"
-            />
-            <IconsTwitteR class="md:hidden ml-4" />
-            <IconsLinkedIn class="md:hidden ml-4" />
+            <div class="navBar__box__icons">
+                <IconsGitHub
+                    :endpoint="`profile`"
+                    class="md:hidden ml-4"
+                />
+                <IconsTwitteR class="md:hidden ml-4" />
+                <IconsLinkedIn class="md:hidden ml-4" />
+            </div>
         </ul>
     </nav>
 </template>
@@ -106,13 +108,21 @@ export default {
     }
 
     &__box {
-        @apply flex flex-col pt-36 px-8 gap-6 fixed top-0 right-0 w-6/12 bg-blue-zodiac-500/60 backdrop-blur-sm h-screen transition ease-linear translate-x-full;
+        @apply flex flex-col pt-36 px-8 gap-3 fixed top-0 right-0 w-6/12 bg-blue-zodiac-500/60 backdrop-blur-sm h-screen transition ease-linear translate-x-full;
 
         &--item {
             @apply mx-1 max-w-min text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500 p-4;
 
             span {
                 @apply mr-1 text-aquamarine-500;
+            }
+        }
+
+        &__icons {
+            @apply flex flex-col gap-4;
+
+            > * {
+                @apply p-4;
             }
         }
     }
