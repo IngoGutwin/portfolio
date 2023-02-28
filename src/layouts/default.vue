@@ -59,8 +59,13 @@
         @apply hidden md:flex flex-col fixed w-[4%] gap-6 justify-center items-center h-screen;
 
         &--item {
-            @apply text-moon-raker hover:text-blue-zodiac-100 text-3xl;
+            @apply text-moon-raker text-3xl transition duration-200;
+
+            &:hover {
+                @apply ease-in text-4xl text-blue-zodiac-100;
+            }
         }
+
     }
 
     &__center {

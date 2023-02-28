@@ -86,10 +86,14 @@ export default {
         }
 
         &__icons {
-            @apply flex gap-4 col-span-full row-start-4 self-center p-4 z-30;
+            @apply flex col-start-2 col-span-2 h-full w-full row-start-4 self-center z-30 justify-between items-center mx-auto;
 
             &--item {
-                @apply text-2xl text-moon-raker hover:text-aquamarine-500 md:text-blue-zodiac-500 md:hover:text-blue-zodiac-100;
+                @apply text-3xl text-moon-raker md:text-blue-zodiac-500 transition duration-200;
+
+                &:hover {
+                    @apply text-4xl text-aquamarine-500 md:text-blue-zodiac-100;
+                }
             }
         }
 
@@ -120,7 +124,7 @@ export default {
         }
 
         &__icons {
-            @apply flex-col col-start-12 row-start-1 row-span-full self-center justify-self-end;
+            @apply flex-col col-start-12 row-start-2 row-span-1 self-center justify-self-end;
         }
 
         &--art-gallery {
