@@ -147,6 +147,10 @@ export default {
     .project {
         @apply grid-rows-md;
 
+        &__heading {
+            @apply col-start-1 col-span-6;
+        }
+
         &__description {
             @apply col-start-1 col-span-6 row-start-2 p-8 my-8 bg-blue-zodiac-300 rounded-lg;
         }
