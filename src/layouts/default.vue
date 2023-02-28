@@ -2,9 +2,24 @@
     <div class="layout">
         <NavBar class="layout__navbar" />
         <div class="layout__left">
-            <IconsGitHub :endpoint="`profile`" />
-            <IconsTwitteR />
-            <IconsLinkedIn />
+            <NuxtLink to="https://github.com/IngoGutwin">
+                <nuxt-icon
+                    name="github"
+                    class="layout__left--item"
+                />
+            </NuxtLink>
+            <NuxtLink to="https://www.linkedin.com/in/ingo-gutwin-16b151145/">
+                <nuxt-icon
+                    name="linkedin"
+                    class="layout__left--item"
+                />
+            </NuxtLink>
+            <NuxtLink to="https://twitter.com/IngoGutwin">
+                <nuxt-icon
+                    name="twitter"
+                    class="layout__left--item"
+                />
+            </NuxtLink>
         </div>
         <div class="layout__center">
             <slot />
@@ -42,6 +57,10 @@
     &__left {
         grid-area: barLeft;
         @apply hidden md:flex flex-col fixed w-[4%] gap-6 justify-center items-center h-screen;
+
+        &--item {
+            @apply text-moon-raker hover:text-blue-zodiac-100 text-3xl;
+        }
     }
 
     &__center {

@@ -3,7 +3,7 @@
 // eslint-disable-next-line no-undef
 export default defineNuxtConfig({
     srcDir: 'src',
-    modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
+    modules: ['@nuxtjs/tailwindcss', '@nuxt/content', 'nuxt-icons'],
     css: ['@@/src/assets/css/base.scss'],
     plugins: [
     ],

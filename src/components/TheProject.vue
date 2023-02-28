@@ -25,12 +25,22 @@
         </ul>
 
         <div class="project__icons">
-            <IconsGitHub
-                :endpoint="project.name"
-            />
-            <IconsExternalLink
-                :endpoint="project.homepage"
-            />
+            <NuxtLink
+                :to="project.html_url"
+            >
+                <nuxt-icon
+                    name="github"
+                    class="project__icons--item"
+                />
+            </NuxtLink>
+            <NuxtLink
+                :to="project.homepage"
+            >
+                <nuxt-icon
+                    name="extern-link"
+                    class="project__icons--item"
+                />
+            </NuxtLink>
         </div>
 
         <div
@@ -77,6 +87,10 @@ export default {
 
         &__icons {
             @apply flex gap-4 col-span-full row-start-4 self-center p-4 z-30;
+
+            &--item {
+                @apply  text-3xl text-moon-raker hover:text-aquamarine-500;
+            }
         }
 
         &--art-gallery {
@@ -107,6 +121,10 @@ export default {
 
         &__icons {
             @apply flex-col col-start-12 row-start-1 row-span-full self-center justify-self-end;
+
+            &__item {
+                @apply text-blue-zodiac-500 hover:text-blue-zodiac-100;
+            }
         }
 
         &--art-gallery {

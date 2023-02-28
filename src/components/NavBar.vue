@@ -4,7 +4,11 @@
         :class="{'-translate-y-40': !scrollUp && !navBarToggle}"
     >
         <NuxtLink to="/">
-            <IconsHaiGuaiLogo class="navBar__logo" />
+            <nuxt-icon
+                name="logo"
+                filled
+                class="navBar__logo"
+            />
         </NuxtLink>
         <div
             class="navBar__toggle"
@@ -29,20 +33,33 @@
             >
                 <span>{{ item.number }}</span>{{ item.name }}
             </NuxtLink>
+
             <div class="navBar__box__icons">
-                <IconsGitHub
-                    :endpoint="`profile`"
-                    class="md:hidden ml-4"
-                />
-                <IconsTwitteR class="md:hidden ml-4" />
-                <IconsLinkedIn class="md:hidden ml-4" />
-                <a
-                    class="text-moon-raker hover:text-aquamarine-500 md:hidden"
-                    href="mailto:ingogutwin@gmail.com"
-                >
-                    ingogutwin@gmail.com
-                </a>
+                <NuxtLink to="https://github.com/IngoGutwin">
+                    <nuxt-icon
+                        name="github"
+                        class="navBar__box__icons--item"
+                    />
+                </NuxtLink>
+                <NuxtLink to="https://www.linkedin.com/in/ingo-gutwin-16b151145/">
+                    <nuxt-icon
+                        name="linkedin"
+                        class="navBar__box__icons--item"
+                    />
+                </NuxtLink>
+                <NuxtLink to="https://twitter.com/IngoGutwin">
+                    <nuxt-icon
+                        name="twitter"
+                        class="navBar__box__icons--item"
+                    />
+                </NuxtLink>
             </div>
+            <a
+                class="navBar__box__mail"
+                href="mailto:ingogutwin@gmail.com"
+            >
+                get in touch
+            </a>
         </ul>
     </nav>
 </template>
@@ -96,7 +113,7 @@ export default {
     @apply transition ease-out duration-500 flex justify-between items-center pr-4 font-Shure-Tech-sans w-full top-0 z-50 fixed;
 
     &__logo {
-        @apply w-24;
+        @apply text-7xl;
     }
 
     &__toggle {
@@ -117,19 +134,24 @@ export default {
         @apply flex flex-col pt-36 px-8 gap-3 fixed top-0 right-0 w-6/12 bg-blue-zodiac-500/60 backdrop-blur-sm h-screen transition ease-linear translate-x-full;
 
         &--item {
-            @apply mx-1 max-w-min text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500 p-4;
+            @apply mx-1 text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500 p-4;
 
             span {
                 @apply mr-1 text-aquamarine-500;
             }
+
         }
 
         &__icons {
-            @apply flex flex-col gap-4;
+            @apply md:hidden flex mx-auto gap-4 my-4;
 
-            > * {
-                @apply p-4;
+            &--item {
+                @apply text-2xl text-moon-raker hover:text-aquamarine-500;
             }
+        }
+
+        &__mail {
+            @apply md:hidden border border-aquamarine-500 rounded-md text-aquamarine-500 text-center whitespace-normal p-2 mx-auto my-4;
         }
     }
 
@@ -147,7 +169,7 @@ export default {
         @apply bg-blue-zodiac-500/60 backdrop-blur-sm;
 
         &__logo {
-            @apply w-36;
+            @apply text-8xl;
         }
 
         &__toggle {
@@ -155,11 +177,7 @@ export default {
         }
 
         &__box {
-            @apply flex-row justify-end pt-4 static bg-white/0 backdrop-blur-none w-full h-full transform-none;
-
-            &--item {
-                @apply self-center;
-            }
+            @apply static flex-row justify-end pt-4 bg-white/0 backdrop-blur-none w-full h-full transform-none;
         }
     }
 }
