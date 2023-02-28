@@ -25,7 +25,7 @@
 <style lang="scss" scoped>
 
 .intro {
-    @apply flex flex-col justify-center gap-10 h-screen min-h-[550px] w-10/12;
+    @apply flex flex-col justify-center gap-10 h-screen min-h-[550px] w-11/12;
 
     &__heading {
         @apply max-w-sm px-7;
@@ -57,12 +57,6 @@
 
     &__description {
         @apply text-zinc-400 font-Public-sans-serif text-base;
-    }
-}
-
-@screen xs {
-    .intro {
-        @apply w-9/12
     }
 }
 
@@ -103,7 +97,7 @@
 
 @screen lg {
     .intro {
-        @apply w-7/12 px-0;
+        @apply w-6/12 px-0;
 
         &__description {
             @apply w-7/12;
