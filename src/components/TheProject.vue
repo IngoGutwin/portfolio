@@ -69,7 +69,7 @@ export default {
         @apply grid grid-cols-12 grid-rows-xs rounded-lg p-1 xs:p-4 bg-blue-zodiac-400;
 
         &__heading {
-            @apply col-start-1 col-span-full row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif text-blue-zodiac-50 p-4;
+            @apply col-start-1 col-span-full row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif text-blue-zodiac-50 p-4 z-30;
         }
 
         &__description {
@@ -98,16 +98,48 @@ export default {
         }
 
         &--art-gallery {
-            @apply bg-art_gallery rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+            @apply bg-art_gallery relative rounded-lg bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+
+             &::before {
+                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition duration-300;
+            }
+
+            &:hover::before {
+                @apply opacity-0 ease-in;
+            }
         }
         &--space-tourism {
-            @apply bg-space_tourism rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+            @apply bg-space_tourism relative rounded-lg bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+
+            &::before {
+                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition duration-300;
+            }
+
+            &:hover::before {
+                @apply opacity-0 ease-in;
+            }
         }
         &--portfolio {
-            @apply bg-portfolio bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+            @apply bg-portfolio relative bg-cover rounded-lg bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+
+            &::before {
+                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition duration-300;
+            }
+
+            &:hover::before {
+                @apply opacity-0 ease-in;
+            }
         }
         &--todo-app {
-            @apply bg-todo_app bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+            @apply bg-todo_app relative bg-cover rounded-lg bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
+
+            &::before {
+                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition duration-300;
+            }
+
+            &:hover::before {
+                @apply opacity-0 ease-in;
+            }
         }
     }
 
@@ -128,26 +160,18 @@ export default {
         }
 
         &--art-gallery {
-            @apply col-start-5 col-span-full row-start-1 row-span-full z-10 relative;
+            @apply col-start-5 col-span-full row-start-1 row-span-full;
 
             &::before {
-                @apply content-[''] absolute w-full h-full z-50 bg-aquamarine-500 opacity-80 rounded-lg transition duration-300;
-            }
-
-            &:hover::before {
-                @apply opacity-0 ease-in;
+                @apply bg-aquamarine-500;
             }
         }
 
         &--space-tourism {
-            @apply col-start-5 col-span-full row-start-1 row-span-full z-10 relative;
+            @apply col-start-5 col-span-full row-start-1 row-span-full;
 
             &::before {
-                @apply content-[''] absolute w-full h-full z-50 bg-aquamarine-500 opacity-80 rounded-lg transition duration-300;
-            }
-
-            &:hover::before {
-                @apply opacity-0 ease-in;
+                @apply bg-aquamarine-500;
             }
         }
 
@@ -155,11 +179,7 @@ export default {
             @apply col-start-5 col-span-full row-start-1 row-span-full z-10 relative;
 
             &::before {
-                @apply content-[''] absolute w-full h-full z-50 bg-aquamarine-500 opacity-80 rounded-lg transition duration-300;
-            }
-
-            &:hover::before {
-                @apply opacity-0 ease-in;
+                @apply bg-aquamarine-500;
             }
         }
 
@@ -167,11 +187,7 @@ export default {
             @apply col-start-5 col-span-full row-start-1 row-span-full z-10 relative;
 
             &::before {
-                @apply content-[''] absolute w-full h-full z-50 bg-aquamarine-500 opacity-80 rounded-lg transition duration-300;
-            }
-
-            &:hover::before {
-                @apply opacity-0 ease-in;
+                @apply bg-aquamarine-500;
             }
         }
     }
