@@ -101,7 +101,7 @@ export default {
             @apply bg-art_gallery relative rounded-lg bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
 
              &::before {
-                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition duration-300;
+                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition-all ease-in duration-200;
             }
 
             &:hover::before {
@@ -112,7 +112,7 @@ export default {
             @apply bg-space_tourism relative rounded-lg bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
 
             &::before {
-                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition duration-300;
+                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition-all ease-out duration-200;
             }
 
             &:hover::before {
@@ -123,7 +123,7 @@ export default {
             @apply bg-portfolio relative bg-cover rounded-lg bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
 
             &::before {
-                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition duration-300;
+                @apply content-[''] absolute w-full h-full z-10 bg-blue-zodiac-500 opacity-90 rounded-lg transition duration-200;
             }
 
             &:hover::before {
