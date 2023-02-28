@@ -134,7 +134,11 @@ export default {
         @apply flex flex-col pt-36 px-8 gap-3 fixed top-0 right-0 w-6/12 bg-blue-zodiac-500/60 backdrop-blur-sm h-screen transition ease-linear translate-x-full;
 
         &--item {
-            @apply mx-1 text-moon-raker rounded-3xl hover:shadow-md hover:shadow-aquamarine-500 p-4;
+            @apply mx-1 max-w-fit text-moon-raker rounded-3xl p-4 transition-all duration-200;
+
+                &:hover {
+                    @apply ease-out shadow-md shadow-aquamarine-500 -translate-y-2 scale-105;
+                }
 
             span {
                 @apply mr-1 text-aquamarine-500;
@@ -146,12 +150,20 @@ export default {
             @apply md:hidden flex mx-auto gap-4 my-4;
 
             &--item {
-                @apply text-2xl text-moon-raker hover:text-aquamarine-500;
+                @apply text-2xl text-moon-raker hover:text-aquamarine-500 transition-all;
+
+                &:hover {
+                    @apply ease-in text-4xl text-blue-zodiac-100;
+                }
             }
         }
 
         &__mail {
-            @apply md:hidden border border-aquamarine-500 rounded-md text-aquamarine-500 text-center whitespace-normal p-2 mx-auto my-4;
+            @apply md:hidden border border-aquamarine-500 rounded-md text-aquamarine-500 text-center whitespace-normal p-2 mx-auto my-4 transition-all;
+
+            &:hover {
+                @apply translate-y-2 scale-105 text-moon-raker border-moon-raker;
+            }
         }
     }
 
