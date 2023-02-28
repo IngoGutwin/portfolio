@@ -8,10 +8,7 @@
             role="img"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
             stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
             class="icon-git-hub"
         >
             <title>GitHub</title>
@@ -22,7 +19,9 @@
 
 <script>
 export default {
-    props: { endpoint: { type: String, required: true } },
+    props: {
+        endpoint: { type: String, required: true }
+    },
     data () {
         return {
             baseURL: 'https://github.com/IngoGutwin'

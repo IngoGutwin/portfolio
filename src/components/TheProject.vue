@@ -56,14 +56,14 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-        @apply grid grid-cols-12 grid-rows-xs bg-blue-zodiac-500/70 hover:bg-blue-zodiac-500/60 rounded-lg hover:shadow-lg hover:shadow-aquamarine-500 p-1 xs:p-4;
+        @apply grid grid-cols-12 grid-rows-xs rounded-lg p-1 xs:p-4 bg-blue-zodiac-400;
 
         &__heading {
             @apply col-start-1 col-span-full row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif text-blue-zodiac-50 p-4;
         }
 
         &__description {
-            @apply col-start-1 col-span-full row-start-2 row-span-2 py-2 text-xs text-aquamarine-300 p-4;
+            @apply col-start-1 col-span-full row-start-2 row-span-2 py-2 text-xs text-aquamarine-300 p-4 z-30;
 
         }
 
@@ -76,11 +76,11 @@ export default {
         }
 
         &__icons {
-            @apply flex gap-4 col-span-full row-start-4 self-center p-4;
+            @apply flex gap-4 col-span-full row-start-4 self-center p-4 z-30;
         }
 
         &--art-gallery {
-            @apply bg-art_gallery rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full relative before:content-[''] before:absolute before:w-full before:h-full before:bg-blue-zodiac-500/70 before:z-10;
+            @apply bg-art_gallery rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
         }
         &--space-tourism {
             @apply bg-space_tourism rounded-lg -z-10 bg-cover bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
@@ -89,7 +89,7 @@ export default {
             @apply bg-portfolio bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
         }
         &--todo-app {
-            @apply bg-todo_app bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full relative before:content-[''] before:absolute before:w-full before:h-full before:bg-blue-zodiac-500/70 before:z-10;
+            @apply bg-todo_app bg-cover rounded-lg -z-10 bg-center bg-no-repeat w-full h-full col-start-1 col-span-full row-start-1 row-span-full;
         }
     }
 
@@ -110,19 +110,51 @@ export default {
         }
 
         &--art-gallery {
-            @apply col-start-5 col-span-full row-start-1 row-span-full;
+            @apply col-start-5 col-span-full row-start-1 row-span-full z-10 relative;
+
+            &::before {
+                @apply content-[''] absolute w-full h-full z-50 bg-aquamarine-500 opacity-80 rounded-lg transition duration-300;
+            }
+
+            &:hover::before {
+                @apply opacity-0 ease-in;
+            }
         }
 
         &--space-tourism {
-            @apply col-start-5 col-span-full row-start-1 row-span-full;
+            @apply col-start-5 col-span-full row-start-1 row-span-full z-10 relative;
+
+            &::before {
+                @apply content-[''] absolute w-full h-full z-50 bg-aquamarine-500 opacity-80 rounded-lg transition duration-300;
+            }
+
+            &:hover::before {
+                @apply opacity-0 ease-in;
+            }
         }
 
         &--portfolio {
-            @apply col-start-5 col-span-full row-start-1 row-span-full;
+            @apply col-start-5 col-span-full row-start-1 row-span-full z-10 relative;
+
+            &::before {
+                @apply content-[''] absolute w-full h-full z-50 bg-aquamarine-500 opacity-80 rounded-lg transition duration-300;
+            }
+
+            &:hover::before {
+                @apply opacity-0 ease-in;
+            }
         }
 
         &--todo-app {
-            @apply col-start-5 col-span-full row-start-1 row-span-full;
+            @apply col-start-5 col-span-full row-start-1 row-span-full z-10 relative;
+
+            &::before {
+                @apply content-[''] absolute w-full h-full z-50 bg-aquamarine-500 opacity-80 rounded-lg transition duration-300;
+            }
+
+            &:hover::before {
+                @apply opacity-0 ease-in;
+            }
         }
     }
 }
