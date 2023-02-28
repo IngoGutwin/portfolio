@@ -1,5 +1,9 @@
 @use "./fonts" as *;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     @apply bg-blue-zodiac-500 text-aquamarine-200 text-sm;
 }
