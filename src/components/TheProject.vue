@@ -86,7 +86,7 @@ export default {
         }
 
         &__icons {
-            @apply flex col-start-2 col-span-2 h-full w-full row-start-4 self-center z-30 justify-between items-center mx-auto;
+            @apply flex col-start-2 col-span-2 row-start-4 self-center z-30 justify-between items-center mx-auto;
 
             &--item {
                 @apply text-3xl text-moon-raker md:text-blue-zodiac-500 transition-all duration-200;
