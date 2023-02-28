@@ -85,7 +85,7 @@ export default {
     beforeMount () {
         window.addEventListener('scroll', debounce(() => {
             this.handleScroll()
-        }, 150))
+        }, 100))
     },
     methods: {
         toggleNavbar () {
