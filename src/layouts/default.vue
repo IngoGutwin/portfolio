@@ -2,24 +2,26 @@
     <div class="layout">
         <NavBar class="layout__navbar" />
         <div class="layout__left">
-            <NuxtLink to="https://github.com/IngoGutwin">
-                <nuxt-icon
-                    name="github"
-                    class="layout__left--item"
-                />
-            </NuxtLink>
-            <NuxtLink to="https://www.linkedin.com/in/ingo-gutwin-16b151145/">
-                <nuxt-icon
-                    name="linkedin"
-                    class="layout__left--item"
-                />
-            </NuxtLink>
-            <NuxtLink to="https://twitter.com/IngoGutwin">
-                <nuxt-icon
-                    name="twitter"
-                    class="layout__left--item"
-                />
-            </NuxtLink>
+            <div class="layout__left__box">
+                <NuxtLink to="https://github.com/IngoGutwin">
+                    <nuxt-icon
+                        name="github"
+                        class="layout__left__box--item"
+                    />
+                </NuxtLink>
+                <NuxtLink to="https://www.linkedin.com/in/ingo-gutwin-16b151145/">
+                    <nuxt-icon
+                        name="linkedin"
+                        class="layout__left__box--item"
+                    />
+                </NuxtLink>
+                <NuxtLink to="https://twitter.com/IngoGutwin">
+                    <nuxt-icon
+                        name="twitter"
+                        class="layout__left__box--item"
+                    />
+                </NuxtLink>
+            </div>
         </div>
         <div class="layout__center">
             <slot />
@@ -56,16 +58,19 @@
 
     &__left {
         grid-area: barLeft;
-        @apply hidden md:flex flex-col fixed w-[4%] gap-6 justify-center items-center h-screen;
+        @apply hidden md:flex flex-col fixed w-[4%] justify-center items-center h-screen;
 
-        &--item {
-            @apply text-moon-raker text-3xl transition-all;
+        &__box {
+            @apply h-32 flex flex-col justify-between items-center w-full;
 
-            &:hover {
-                @apply ease-in text-4xl text-blue-zodiac-100;
+            &--item {
+                @apply text-moon-raker text-3xl transition-all;
+
+                &:hover {
+                    @apply ease-in text-4xl text-blue-zodiac-100;
+                }
             }
         }
-
     }
 
     &__center {

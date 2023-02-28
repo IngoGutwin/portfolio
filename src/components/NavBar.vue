@@ -147,7 +147,7 @@ export default {
         }
 
         &__icons {
-            @apply md:hidden flex mx-auto gap-4 my-4;
+            @apply md:hidden flex mx-auto gap-4 my-4 h-11;
 
             &--item {
                 @apply text-2xl text-moon-raker hover:text-aquamarine-500 transition-all;
@@ -159,7 +159,7 @@ export default {
         }
 
         &__mail {
-            @apply md:hidden border border-aquamarine-500 rounded-md text-aquamarine-500 text-center whitespace-normal p-2 mx-auto my-4 transition-all;
+            @apply md:hidden border border-aquamarine-500 rounded-md text-aquamarine-500 text-center whitespace-normal p-2 mx-auto mt-4 transition-all;
 
             &:hover {
                 @apply translate-y-2 scale-105 text-moon-raker border-moon-raker;

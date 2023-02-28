@@ -86,13 +86,13 @@ export default {
         }
 
         &__icons {
-            @apply flex col-start-1 col-span-2 w-full min-h-min row-start-4 self-center z-30 justify-between items-center mx-auto;
+            @apply flex col-start-1 col-span-3 w-20 h-16 row-start-4 self-center z-30 justify-between items-center pl-4;
 
             &--item {
-                @apply text-3xl text-moon-raker md:text-blue-zodiac-500 transition-all duration-200;
+                @apply text-2xl text-moon-raker md:text-blue-zodiac-500 transition-all duration-200;
 
                 &:hover {
-                    @apply text-4xl text-aquamarine-500 md:text-blue-zodiac-100;
+                    @apply text-3xl text-aquamarine-500 md:text-blue-zodiac-100;
                 }
             }
         }
