@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-        @apply grid grid-cols-12 grid-rows-xs rounded-lg p-1 xs:p-4 bg-blue-zodiac-400;
+        @apply grid grid-cols-12 grid-rows-xs rounded-lg p-1 xs:p-4 max-w-2xl bg-blue-zodiac-400;
 
         &__heading {
             @apply col-start-1 col-span-full row-start-1 text-3xl font-extrabold font-Open-Dyslex-serif text-blue-zodiac-50 p-4 z-30;

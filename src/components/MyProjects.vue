@@ -7,7 +7,7 @@
             <h2
                 class="projects__info__heading"
             >
-                .03 <span>Projects</span>
+                .03 <span>Some Stuff I've Build</span>
             </h2>
         </div>
         <div class="projects__all">
@@ -42,13 +42,13 @@ export default {
 
 <style lang="scss" scoped>
 .projects {
-    @apply gap-5 py-16 w-full lg:w-10/12 xl:w-7/12;
+    @apply gap-5 py-16 w-full;
 
     &__info {
-        @apply mx-auto flex justify-start w-11/12;
+        @apply mx-auto flex justify-center w-11/12;
 
         &__heading {
-            @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl mb-5;
+            @apply font-bold font-Public-sans-serif text-aquamarine-500 text-xl mb-5 w-6/12;
 
             > span {
                 @apply font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-aquamarine-700 to-blue-zodiac-50;
@@ -65,7 +65,7 @@ export default {
     }
 
     &__all {
-        @apply flex flex-col gap-28 mx-auto;
+        @apply flex flex-wrap justify-center gap-28 mx-auto;
     }
 
 }

@@ -150,7 +150,7 @@ export default {
             @apply md:hidden flex mx-auto gap-4 my-4 h-11;
 
             &--item {
-                @apply text-2xl text-moon-raker hover:text-aquamarine-500 transition-all;
+                @apply text-2xl text-moon-raker transition-all;
 
                 &:hover {
                     @apply ease-in text-4xl text-blue-zodiac-100;
